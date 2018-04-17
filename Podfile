@@ -8,6 +8,8 @@ target 'Youtube' do
   # Pods for Youtube
   pod 'Alamofire', '~> 4.7'
   pod 'Kingfisher', '~> 4.0'
+  pod 'GoogleAPIClientForREST/YouTube', '~> 1.2.1'
+  pod 'Google/SignIn', '~> 3.0.3'
 
   target 'YoutubeTests' do
     inherit! :search_paths
