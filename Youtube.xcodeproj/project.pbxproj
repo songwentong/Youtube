@@ -10,16 +10,16 @@
 		162FB6C9252C1BD70D2AB689 /* Pods_Youtube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C466C1BEDF972DC14EB8E99F /* Pods_Youtube.framework */; };
 		2DBA584537315E766CADB062 /* Pods_YoutubeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D272CA6330DD90BC1337EF /* Pods_YoutubeTests.framework */; };
 		7743E18D20C78042008806A3 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7743E18C20C78042008806A3 /* HomeVC.swift */; };
+		7743E19320C781AC008806A3 /* FirstSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7743E19520C781AC008806A3 /* FirstSB.storyboard */; };
+		7743E19A20C781B9008806A3 /* SecondSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7743E19C20C781B9008806A3 /* SecondSB.storyboard */; };
+		7743E1A120C781C5008806A3 /* ThirdSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7743E1A320C781C5008806A3 /* ThirdSB.storyboard */; };
+		7743E1A820C781CD008806A3 /* FourthSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7743E1AA20C781CD008806A3 /* FourthSB.storyboard */; };
 		77EE700220858C830065850D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EE700120858C830065850D /* AppDelegate.swift */; };
 		77EE700720858C830065850D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EE700520858C830065850D /* Main.storyboard */; };
 		77EE700920858C840065850D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77EE700820858C840065850D /* Assets.xcassets */; };
 		77EE700C20858C840065850D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EE700A20858C840065850D /* LaunchScreen.storyboard */; };
 		77EE701720858C840065850D /* YoutubeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EE701620858C840065850D /* YoutubeTests.swift */; };
 		77EE702220858C840065850D /* YoutubeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EE702120858C840065850D /* YoutubeUITests.swift */; };
-		77EE703320858CE50065850D /* FirstSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EE703220858CE50065850D /* FirstSB.storyboard */; };
-		77EE703520858CF50065850D /* SecondSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EE703420858CF50065850D /* SecondSB.storyboard */; };
-		77EE703720858D020065850D /* ThirdSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EE703620858D020065850D /* ThirdSB.storyboard */; };
-		77EE703920858D6F0065850D /* FourthSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EE703820858D6F0065850D /* FourthSB.storyboard */; };
 		77EE703B2085941A0065850D /* YoutubeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EE703A2085941A0065850D /* YoutubeAPI.swift */; };
 		B847892984E8B6A1FD99807F /* Pods_YoutubeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02681C3E8BE3E25FA94985DF /* Pods_YoutubeUITests.framework */; };
 /* End PBXBuildFile section */
@@ -47,6 +47,22 @@
 		53D272CA6330DD90BC1337EF /* Pods_YoutubeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F126C13255AC9BFE8ED962 /* Pods-Youtube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youtube/Pods-Youtube.release.xcconfig"; sourceTree = "<group>"; };
 		7743E18C20C78042008806A3 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		7743E18F20C78185008806A3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		7743E19020C78185008806A3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		7743E19120C78189008806A3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		7743E19220C7818A008806A3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		7743E19420C781AC008806A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FirstSB.storyboard; sourceTree = "<group>"; };
+		7743E19720C781B0008806A3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FirstSB.strings"; sourceTree = "<group>"; };
+		7743E19920C781B1008806A3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/FirstSB.strings"; sourceTree = "<group>"; };
+		7743E19B20C781B9008806A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SecondSB.storyboard; sourceTree = "<group>"; };
+		7743E19E20C781BB008806A3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SecondSB.strings"; sourceTree = "<group>"; };
+		7743E1A020C781BF008806A3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/SecondSB.strings"; sourceTree = "<group>"; };
+		7743E1A220C781C5008806A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ThirdSB.storyboard; sourceTree = "<group>"; };
+		7743E1A520C781C8008806A3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ThirdSB.strings"; sourceTree = "<group>"; };
+		7743E1A720C781C9008806A3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/ThirdSB.strings"; sourceTree = "<group>"; };
+		7743E1A920C781CD008806A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FourthSB.storyboard; sourceTree = "<group>"; };
+		7743E1AC20C781CF008806A3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FourthSB.strings"; sourceTree = "<group>"; };
+		7743E1AE20C781D0008806A3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/FourthSB.strings"; sourceTree = "<group>"; };
 		77EE6FFE20858C830065850D /* Youtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Youtube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EE700120858C830065850D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77EE700620858C830065850D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,10 +75,6 @@
 		77EE701D20858C840065850D /* YoutubeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EE702120858C840065850D /* YoutubeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeUITests.swift; sourceTree = "<group>"; };
 		77EE702320858C840065850D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		77EE703220858CE50065850D /* FirstSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstSB.storyboard; sourceTree = "<group>"; };
-		77EE703420858CF50065850D /* SecondSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondSB.storyboard; sourceTree = "<group>"; };
-		77EE703620858D020065850D /* ThirdSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThirdSB.storyboard; sourceTree = "<group>"; };
-		77EE703820858D6F0065850D /* FourthSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FourthSB.storyboard; sourceTree = "<group>"; };
 		77EE703A2085941A0065850D /* YoutubeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeAPI.swift; sourceTree = "<group>"; };
 		80F09FF9C61AFEF65DD6E9AF /* Pods-YoutubeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeTests/Pods-YoutubeTests.release.xcconfig"; sourceTree = "<group>"; };
 		8A6D5B67FA40329C1F2D33BE /* Pods-Youtube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youtube/Pods-Youtube.debug.xcconfig"; sourceTree = "<group>"; };
@@ -191,10 +203,10 @@
 			children = (
 				77EE700A20858C840065850D /* LaunchScreen.storyboard */,
 				77EE700520858C830065850D /* Main.storyboard */,
-				77EE703220858CE50065850D /* FirstSB.storyboard */,
-				77EE703420858CF50065850D /* SecondSB.storyboard */,
-				77EE703620858D020065850D /* ThirdSB.storyboard */,
-				77EE703820858D6F0065850D /* FourthSB.storyboard */,
+				7743E19520C781AC008806A3 /* FirstSB.storyboard */,
+				7743E19C20C781B9008806A3 /* SecondSB.storyboard */,
+				7743E1A320C781C5008806A3 /* ThirdSB.storyboard */,
+				7743E1AA20C781CD008806A3 /* FourthSB.storyboard */,
 			);
 			path = IB;
 			sourceTree = "<group>";
@@ -311,6 +323,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 77EE6FF520858C830065850D;
 			productRefGroup = 77EE6FFF20858C830065850D /* Products */;
@@ -329,13 +343,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77EE703520858CF50065850D /* SecondSB.storyboard in Resources */,
+				7743E19A20C781B9008806A3 /* SecondSB.storyboard in Resources */,
 				77EE700C20858C840065850D /* LaunchScreen.storyboard in Resources */,
 				77EE700920858C840065850D /* Assets.xcassets in Resources */,
-				77EE703320858CE50065850D /* FirstSB.storyboard in Resources */,
+				7743E19320C781AC008806A3 /* FirstSB.storyboard in Resources */,
 				77EE700720858C830065850D /* Main.storyboard in Resources */,
-				77EE703920858D6F0065850D /* FourthSB.storyboard in Resources */,
-				77EE703720858D020065850D /* ThirdSB.storyboard in Resources */,
+				7743E1A820C781CD008806A3 /* FourthSB.storyboard in Resources */,
+				7743E1A120C781C5008806A3 /* ThirdSB.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,10 +515,52 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7743E19520C781AC008806A3 /* FirstSB.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7743E19420C781AC008806A3 /* Base */,
+				7743E19720C781B0008806A3 /* zh-Hans */,
+				7743E19920C781B1008806A3 /* zh-Hant */,
+			);
+			name = FirstSB.storyboard;
+			sourceTree = "<group>";
+		};
+		7743E19C20C781B9008806A3 /* SecondSB.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7743E19B20C781B9008806A3 /* Base */,
+				7743E19E20C781BB008806A3 /* zh-Hans */,
+				7743E1A020C781BF008806A3 /* zh-Hant */,
+			);
+			name = SecondSB.storyboard;
+			sourceTree = "<group>";
+		};
+		7743E1A320C781C5008806A3 /* ThirdSB.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7743E1A220C781C5008806A3 /* Base */,
+				7743E1A520C781C8008806A3 /* zh-Hans */,
+				7743E1A720C781C9008806A3 /* zh-Hant */,
+			);
+			name = ThirdSB.storyboard;
+			sourceTree = "<group>";
+		};
+		7743E1AA20C781CD008806A3 /* FourthSB.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7743E1A920C781CD008806A3 /* Base */,
+				7743E1AC20C781CF008806A3 /* zh-Hans */,
+				7743E1AE20C781D0008806A3 /* zh-Hant */,
+			);
+			name = FourthSB.storyboard;
+			sourceTree = "<group>";
+		};
 		77EE700520858C830065850D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				77EE700620858C830065850D /* Base */,
+				7743E19020C78185008806A3 /* zh-Hans */,
+				7743E19220C7818A008806A3 /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -513,6 +569,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				77EE700B20858C840065850D /* Base */,
+				7743E18F20C78185008806A3 /* zh-Hans */,
+				7743E19120C78189008806A3 /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -524,6 +582,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -584,6 +643,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
