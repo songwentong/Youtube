@@ -14,6 +14,7 @@
 		7743E19A20C781B9008806A3 /* SecondSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7743E19C20C781B9008806A3 /* SecondSB.storyboard */; };
 		7743E1A120C781C5008806A3 /* ThirdSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7743E1A320C781C5008806A3 /* ThirdSB.storyboard */; };
 		7743E1A820C781CD008806A3 /* FourthSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7743E1AA20C781CD008806A3 /* FourthSB.storyboard */; };
+		7743E1B320C7834A008806A3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7743E1B220C7834A008806A3 /* Info.plist */; };
 		77EE700220858C830065850D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EE700120858C830065850D /* AppDelegate.swift */; };
 		77EE700720858C830065850D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EE700520858C830065850D /* Main.storyboard */; };
 		77EE700920858C840065850D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77EE700820858C840065850D /* Assets.xcassets */; };
@@ -47,9 +48,7 @@
 		53D272CA6330DD90BC1337EF /* Pods_YoutubeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F126C13255AC9BFE8ED962 /* Pods-Youtube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youtube/Pods-Youtube.release.xcconfig"; sourceTree = "<group>"; };
 		7743E18C20C78042008806A3 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		7743E18F20C78185008806A3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		7743E19020C78185008806A3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		7743E19120C78189008806A3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		7743E19220C7818A008806A3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		7743E19420C781AC008806A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FirstSB.storyboard; sourceTree = "<group>"; };
 		7743E19720C781B0008806A3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FirstSB.strings"; sourceTree = "<group>"; };
@@ -63,12 +62,13 @@
 		7743E1A920C781CD008806A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FourthSB.storyboard; sourceTree = "<group>"; };
 		7743E1AC20C781CF008806A3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FourthSB.strings"; sourceTree = "<group>"; };
 		7743E1AE20C781D0008806A3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/FourthSB.strings"; sourceTree = "<group>"; };
+		7743E1B220C7834A008806A3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7743E1B520C787EB008806A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		77EE6FFE20858C830065850D /* Youtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Youtube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EE700120858C830065850D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77EE700620858C830065850D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77EE700820858C840065850D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77EE700B20858C840065850D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		77EE700D20858C840065850D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77EE701220858C840065850D /* YoutubeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EE701620858C840065850D /* YoutubeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeTests.swift; sourceTree = "<group>"; };
 		77EE701820858C840065850D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 				77EE702F20858C8F0065850D /* Source */,
 				77EE703020858C950065850D /* IB */,
 				77EE703120858CB90065850D /* Resource */,
-				77EE700D20858C840065850D /* Info.plist */,
+				7743E1B220C7834A008806A3 /* Info.plist */,
 			);
 			path = Youtube;
 			sourceTree = "<group>";
@@ -343,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7743E1B320C7834A008806A3 /* Info.plist in Resources */,
 				7743E19A20C781B9008806A3 /* SecondSB.storyboard in Resources */,
 				77EE700C20858C840065850D /* LaunchScreen.storyboard in Resources */,
 				77EE700920858C840065850D /* Assets.xcassets in Resources */,
@@ -561,6 +562,7 @@
 				77EE700620858C830065850D /* Base */,
 				7743E19020C78185008806A3 /* zh-Hans */,
 				7743E19220C7818A008806A3 /* zh-Hant */,
+				7743E1B520C787EB008806A3 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -569,8 +571,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				77EE700B20858C840065850D /* Base */,
-				7743E18F20C78185008806A3 /* zh-Hans */,
-				7743E19120C78189008806A3 /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
