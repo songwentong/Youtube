@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		162FB6C9252C1BD70D2AB689 /* Pods_Youtube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C466C1BEDF972DC14EB8E99F /* Pods_Youtube.framework */; };
 		2DBA584537315E766CADB062 /* Pods_YoutubeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D272CA6330DD90BC1337EF /* Pods_YoutubeTests.framework */; };
+		7743E18D20C78042008806A3 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7743E18C20C78042008806A3 /* HomeVC.swift */; };
 		77EE700220858C830065850D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EE700120858C830065850D /* AppDelegate.swift */; };
 		77EE700720858C830065850D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EE700520858C830065850D /* Main.storyboard */; };
 		77EE700920858C840065850D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77EE700820858C840065850D /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		25D9B6E4DBF697672E5E65B0 /* Pods-YoutubeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeUITests/Pods-YoutubeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		53D272CA6330DD90BC1337EF /* Pods_YoutubeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F126C13255AC9BFE8ED962 /* Pods-Youtube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youtube/Pods-Youtube.release.xcconfig"; sourceTree = "<group>"; };
+		7743E18C20C78042008806A3 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		77EE6FFE20858C830065850D /* Youtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Youtube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EE700120858C830065850D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77EE700620858C830065850D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +109,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7743E18B20C78032008806A3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7743E18C20C78042008806A3 /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7743E18E20C78046008806A3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				77EE700120858C830065850D /* AppDelegate.swift */,
+				77EE703A2085941A0065850D /* YoutubeAPI.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		77EE6FF520858C830065850D = {
 			isa = PBXGroup;
 			children = (
@@ -161,8 +180,8 @@
 		77EE702F20858C8F0065850D /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				77EE700120858C830065850D /* AppDelegate.swift */,
-				77EE703A2085941A0065850D /* YoutubeAPI.swift */,
+				7743E18E20C78046008806A3 /* Main */,
+				7743E18B20C78032008806A3 /* Home */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -444,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7743E18D20C78042008806A3 /* HomeVC.swift in Sources */,
 				77EE703B2085941A0065850D /* YoutubeAPI.swift in Sources */,
 				77EE700220858C830065850D /* AppDelegate.swift in Sources */,
 			);
@@ -622,7 +642,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Youtube/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abc.Youtube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -638,7 +661,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Youtube/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abc.Youtube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -654,7 +680,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = YoutubeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abc.YoutubeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -671,7 +701,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = YoutubeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abc.YoutubeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -687,7 +721,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = YoutubeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abc.YoutubeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -703,7 +741,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = YoutubeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abc.YoutubeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
