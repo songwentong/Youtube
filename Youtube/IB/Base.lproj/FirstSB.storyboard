@@ -16,7 +16,7 @@
                 <navigationController id="YhP-Si-8qf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="HOME" id="krR-gM-bId"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d7j-gD-ZnD">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d7j-gD-ZnD">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -35,15 +35,49 @@
                     <view key="view" contentMode="scaleToFill" id="9KM-Tw-48M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLb-H9-LP0">
+                                <rect key="frame" x="0.0" y="20" width="375" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niu Tube" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnf-gb-Tmb">
+                                        <rect key="frame" x="8" y="8" width="88" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入关键字" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W4Y-jW-OM4">
+                                        <rect key="frame" x="116" y="7" width="239" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81176470588235294" green="0.13333333333333333" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1Hk-Y3-NhZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="W4Y-jW-OM4" secondAttribute="trailing" constant="20" id="7Zt-gd-kr1"/>
+                                    <constraint firstItem="mnf-gb-Tmb" firstAttribute="top" secondItem="PLb-H9-LP0" secondAttribute="top" constant="8" id="VmB-p0-yrd"/>
+                                    <constraint firstItem="W4Y-jW-OM4" firstAttribute="centerY" secondItem="mnf-gb-Tmb" secondAttribute="centerY" id="Vo3-M9-noU"/>
+                                    <constraint firstItem="W4Y-jW-OM4" firstAttribute="leading" secondItem="mnf-gb-Tmb" secondAttribute="trailing" constant="20" id="dqT-jd-esG"/>
+                                    <constraint firstItem="mnf-gb-Tmb" firstAttribute="leading" secondItem="PLb-H9-LP0" secondAttribute="leading" constant="8" id="gJq-Av-XxE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PLb-H9-LP0" firstAttribute="top" secondItem="TXJ-1k-ya3" secondAttribute="top" id="CUL-qh-ZbF"/>
+                            <constraint firstItem="PLb-H9-LP0" firstAttribute="trailing" secondItem="TXJ-1k-ya3" secondAttribute="trailing" id="EwF-XL-CIm"/>
+                            <constraint firstItem="PLb-H9-LP0" firstAttribute="leading" secondItem="TXJ-1k-ya3" secondAttribute="leading" id="ubN-r6-hYd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TXJ-1k-ya3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="wD9-gc-pRq"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbg-7q-jug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68" y="-9"/>
+            <point key="canvasLocation" x="68" y="-9.4452773613193415"/>
         </scene>
     </scenes>
 </document>
