@@ -16,6 +16,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         myTableView.dataSource = myDataSrouce
         // Do any additional setup after loading the view.
+        requestData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,4 +35,12 @@ class HomeVC: UIViewController {
     }
     */
 
+}
+extension HomeVC{
+    func requestData() -> Void {
+        
+    }
+    func updateUI() -> Void {
+        
+    }
 }
