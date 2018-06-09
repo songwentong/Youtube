@@ -4,7 +4,7 @@
 //
 //  Created by 宋文通 on 2018/5/2.
 //  Copyright © 2018年 tempOrganization. All rights reserved.
-//  
+//  http://10.45.20.11:88/interface.md  文档地址
 
 import Foundation
 import Alamofire
@@ -20,7 +20,7 @@ extension Networking{
     }()
     
     func url(with domain:Domain = .serverURL,methodName apiName:ServerMethod, appendString: String? = nil) -> URL {
-//        let urlString = domain.rawValue + "/" + apiName.rawValue + "/" + appendString
+        //        let urlString = domain.rawValue + "/" + apiName.rawValue + "/" + appendString
         var strings = [domain.rawValue,apiName.rawValue]
         if let temp = appendString{
             strings.append(temp)
@@ -78,12 +78,17 @@ extension Networking {
         failed: @escaping (NetWorkingError)->Void)  -> DataRequest
     {
         var myHeaders = HTTPHeaders()
-        if let headers = headers{
-            myHeaders = myHeaders + headers
+        if let h = headers{
+            myHeaders = myHeaders.merging(h) { (c, n) -> String in
+                return n
+            }
         }
-        if let defaultHttpHeaders = defaultHttpHeaders(){
-            myHeaders = myHeaders + defaultHttpHeaders
+        if let h = defaultHttpHeaders(){
+            myHeaders = myHeaders.merging(h) { (c, n) -> String in
+                return n
+            }
         }
+        
         let task = Alamofire.request(url, method: method, parameters: parameters, encoding: encoding, headers: myHeaders)
         task.responseData { (response) in
             self.convertResponse(dataResponse: response, finished: finished, failed: failed)
@@ -100,10 +105,14 @@ extension Networking{
         headers: HTTPHeaders? = nil,
         encodingCompletion: ((SessionManager.MultipartFormDataEncodingResult) -> Void)?){var myHeaders = HTTPHeaders()
         if let headers = headers{
-            myHeaders = myHeaders + headers
+            myHeaders = myHeaders.merging(headers, uniquingKeysWith: { (c, n) -> String in
+                return n
+            })
         }
         if let defaultHttpHeaders = defaultHttpHeaders(){
-            myHeaders = myHeaders + defaultHttpHeaders
+            myHeaders = myHeaders.merging(defaultHttpHeaders, uniquingKeysWith: { (c, n) -> String in
+                return n
+            })
         }
         Alamofire.upload(multipartFormData: multipartFormData, usingThreshold: encodingMemoryThreshold, to: url, method: method, headers: myHeaders, encodingCompletion: encodingCompletion)
     }
@@ -125,7 +134,7 @@ struct CommonResponse<T: Codable>: Codable {
     let message: String
     let timestamp: Int
     let responseData: T?
-
+    
     enum CodingKeys: String, CodingKey {
         case returnCode = "ret"
         case message = "msg"

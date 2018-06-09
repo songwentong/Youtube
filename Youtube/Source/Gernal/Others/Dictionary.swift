@@ -7,11 +7,3 @@
 //
 
 import Foundation
-//+运算符重载
-func + <K, V> (left: [K:V], right: [K:V]) -> [K:V] {
-    var result = left
-    for (k, v) in right {
-        result[k] = v
-    }
-    return result
-}
