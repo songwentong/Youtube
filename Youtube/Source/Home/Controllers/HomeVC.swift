@@ -14,6 +14,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var myCollectionView: UICollectionView!
     var myds = HomeCollectionViewDS()
     var titleDS = HomeTitleDS()
+    var titleList:[Categoty] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         registNibs()
@@ -23,6 +24,9 @@ class HomeVC: UIViewController {
         myCollectionView.delegate = myds
         titleCollectionView.dataSource = titleDS
         titleCollectionView.delegate = titleDS
+    }
+    func tempCategoryList() -> Void {
+        
     }
 
     override func didReceiveMemoryWarning() {

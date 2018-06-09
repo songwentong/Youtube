@@ -7,7 +7,7 @@
 //
 
 import UIKit
-struct Title:Codable {
+struct Categoty:Codable {
     var title:String
 }
 class HomeTitleModel: NSObject,UICollectionViewCellModel {

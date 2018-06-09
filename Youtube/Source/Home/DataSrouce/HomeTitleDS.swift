@@ -11,6 +11,11 @@ import UIKit
 class HomeTitleDS: NSObject {
     var collectionModel = DefaultUICollectionViewModel()
 }
+extension HomeTitleDS{
+    func createDefaultData() -> Void {
+        
+    }
+}
 extension HomeTitleDS:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collectionModel.sections[0].items.count

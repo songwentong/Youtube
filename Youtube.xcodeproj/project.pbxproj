@@ -180,6 +180,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		770BF28B20CBC4D9007B7797 /* DataSrouce */ = {
+			isa = PBXGroup;
+			children = (
+				770BF28520CBBF59007B7797 /* HomeTitleDS.swift */,
+				77965F4220CB699C006C4E0F /* HomeTableDataSource.swift */,
+				77E2FE5B20CB6FCF00FFF34C /* HomeCollectionViewDS.swift */,
+			);
+			path = DataSrouce;
+			sourceTree = "<group>";
+		};
 		7742D3BD20CBA37B00102120 /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +211,7 @@
 		7743E18B20C78032008806A3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				770BF28B20CBC4D9007B7797 /* DataSrouce */,
 				77965F4120CB6983006C4E0F /* Controllers */,
 				77E2FE5D20CB6FFE00FFF34C /* Model */,
 				77E2FE4620CB6D8500FFF34C /* Views */,
@@ -301,9 +312,6 @@
 		77E2FE5D20CB6FFE00FFF34C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				770BF28520CBBF59007B7797 /* HomeTitleDS.swift */,
-				77E2FE5B20CB6FCF00FFF34C /* HomeCollectionViewDS.swift */,
-				77965F4220CB699C006C4E0F /* HomeTableDataSource.swift */,
 				77E2FE5E20CB701800FFF34C /* HomeCollectionViewCellModel.swift */,
 			);
 			path = Model;
