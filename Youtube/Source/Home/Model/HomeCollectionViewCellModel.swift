@@ -7,11 +7,12 @@
 //
 
 import UIKit
-struct Categoty:Codable {
+struct CategoryModel:Codable {
     var title:String
 }
 class HomeTitleModel: NSObject,UICollectionViewCellModel {
     var reuseId: String = "HomeTitleCollectionViewCell"
+    var model: CategoryModel!
 }
 class HomeCollectionViewCellModel: NSObject,UICollectionViewCellModel {
     var reuseId: String = "HomeCollectionViewCell"

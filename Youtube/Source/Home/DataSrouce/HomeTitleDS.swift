@@ -10,6 +10,19 @@ import UIKit
 
 class HomeTitleDS: NSObject {
     var collectionModel = DefaultUICollectionViewModel()
+    var titleList:[CategoryModel] = []{
+        didSet{
+            let section = DefaulUICollectionViewSectionModel()
+            let cells:[HomeTitleModel] = titleList.map { (category) -> HomeTitleModel in
+                let m = HomeTitleModel()
+                m.model = category
+                return m
+            }
+            section.items.append(contentsOf: cells)
+            collectionModel.sections.removeAll()
+            collectionModel.sections.append(section)
+        }
+    }
 }
 extension HomeTitleDS{
     func createDefaultData() -> Void {
@@ -17,6 +30,9 @@ extension HomeTitleDS{
     }
 }
 extension HomeTitleDS:UICollectionViewDataSource{
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return collectionModel.sections.count
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collectionModel.sections[0].items.count
     }
@@ -30,6 +46,8 @@ extension HomeTitleDS:UIScrollViewDelegate{}
 extension HomeTitleDS:UICollectionViewDelegate{}
 extension HomeTitleDS:UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-        return collectionView.bounds.size
+        var size = collectionView.bounds.size
+        size.width = 100
+        return size
     }
 }

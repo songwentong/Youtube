@@ -14,7 +14,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var myCollectionView: UICollectionView!
     var myds = HomeCollectionViewDS()
     var titleDS = HomeTitleDS()
-    var titleList:[Categoty] = []
+    var titleList:[CategoryModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         registNibs()
@@ -24,9 +24,17 @@ class HomeVC: UIViewController {
         myCollectionView.delegate = myds
         titleCollectionView.dataSource = titleDS
         titleCollectionView.delegate = titleDS
+        titleList = tempCategoryList()
+        titleDS.titleList = titleList
+        titleCollectionView.reloadData()
     }
-    func tempCategoryList() -> Void {
-        
+    func tempCategoryList() -> [CategoryModel] {
+        var list = [CategoryModel]()
+        for i in 0..<10{
+            let cat = CategoryModel.init(title: "title\(i)")
+            list.append(cat)
+        }
+        return list
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +56,7 @@ class HomeVC: UIViewController {
 }
 extension HomeVC{
     func registNibs() -> Void {
+        titleCollectionView.register(UINib.init(nibName: "HomeTitleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeTitleCollectionViewCell")
         myCollectionView.register(UINib.init(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeCollectionViewCell")
     }
     func requestData() -> Void {

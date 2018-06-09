@@ -10,7 +10,14 @@ import UIKit
 
 class HomeTitleCollectionViewCell: UICollectionViewCell ,UICollectionViewCellModelAcceptProtocol {
     @IBOutlet weak var titleLabel: UILabel!
-    var cellModel: UICollectionViewCellModel!
+    var cellModel: UICollectionViewCellModel!{
+        didSet{
+            guard let m = cellModel as? HomeTitleModel else {
+                return
+            }
+            titleLabel.text = m.model.title
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
