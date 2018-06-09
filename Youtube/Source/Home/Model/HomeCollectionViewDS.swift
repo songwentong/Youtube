@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeCollectionViewDS: NSObject {
-
+    
 }
 extension HomeCollectionViewDS:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

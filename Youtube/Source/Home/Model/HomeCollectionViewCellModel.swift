@@ -8,6 +8,6 @@
 
 import UIKit
 
-class HomeCollectionViewCellModel: NSObject {
-
+class HomeCollectionViewCellModel: NSObject,UICollectionViewCellModel {
+    var reuseId: String = ""
 }

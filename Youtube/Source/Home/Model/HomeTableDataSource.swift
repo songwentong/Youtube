@@ -9,14 +9,15 @@
 import UIKit
 
 class HomeTableDataSource: NSObject {
-
+    var tableModel = DefaultUICollectionViewModel()
 }
 extension HomeTableDataSource:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return tableModel.sections[0].items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         return cell
     }

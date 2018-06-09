@@ -8,9 +8,6 @@
 
 import Foundation
 import CoreGraphics
-protocol UICollectionViewCellModel {//cell
-    var reuseId:String{get set}
-}
 protocol UICollectionViewSectionModel {//section
     var items:[UICollectionViewCellModel]{get set}
 }
@@ -20,14 +17,17 @@ protocol UICollectionViewModel {
 protocol UICollectionViewCellSizeModel {//大小
     var size:CGSize{get set}
 }
+class DefaultUICollectionViewModel: NSObject,UICollectionViewModel {
+    var sections:[UICollectionViewSectionModel] = []
+    func model(for indexPath:NSIndexPath) -> UICollectionViewCellModel {
+        let model = sections[indexPath.section].items[indexPath.item]
+        return model
+    }
+}
 class DefaultUICollectionViewCellModel: UICollectionViewCellModel {//默认的实现
     var reuseId:String = ""
     var size:CGSize = CGSize.zero
 }
 class DefaulUICollectionViewSectionModel: UICollectionViewSectionModel {//默认的section
     var items:[UICollectionViewCellModel] = []
-}
-//收取的cell应该实现的协议
-protocol UICollectionViewCellModelAcceptProtocol {//数据
-    var cellModel:UICollectionViewCellModel!{get set}
 }
