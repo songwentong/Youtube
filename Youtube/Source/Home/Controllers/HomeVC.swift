@@ -10,8 +10,10 @@ import UIKit
 
 class HomeVC: UIViewController {
 
+    @IBOutlet weak var titleCollectionView: UICollectionView!
     @IBOutlet weak var myCollectionView: UICollectionView!
     var myds = HomeCollectionViewDS()
+    var titleDS = HomeTitleDS()
     override func viewDidLoad() {
         super.viewDidLoad()
         registNibs()
@@ -19,6 +21,8 @@ class HomeVC: UIViewController {
         myds.createDefaultData()
         myCollectionView.dataSource = myds
         myCollectionView.delegate = myds
+        titleCollectionView.dataSource = titleDS
+        titleCollectionView.delegate = titleDS
     }
 
     override func didReceiveMemoryWarning() {

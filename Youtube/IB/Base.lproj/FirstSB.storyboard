@@ -51,11 +51,28 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gyq-O3-ZhF">
+                                        <rect key="frame" x="0.0" y="60" width="375" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1FI-8b-hay"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4yo-ja-VBy">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.81176470588235294" green="0.13333333333333333" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="1Hk-Y3-NhZ"/>
+                                    <constraint firstItem="Gyq-O3-ZhF" firstAttribute="leading" secondItem="PLb-H9-LP0" secondAttribute="leading" id="2uk-A4-Ya7"/>
                                     <constraint firstAttribute="trailing" secondItem="W4Y-jW-OM4" secondAttribute="trailing" constant="20" id="7Zt-gd-kr1"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gyq-O3-ZhF" secondAttribute="bottom" id="GTO-W5-n70"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gyq-O3-ZhF" secondAttribute="trailing" id="QH2-6v-zix"/>
                                     <constraint firstItem="mnf-gb-Tmb" firstAttribute="top" secondItem="PLb-H9-LP0" secondAttribute="top" constant="8" id="VmB-p0-yrd"/>
                                     <constraint firstItem="W4Y-jW-OM4" firstAttribute="centerY" secondItem="mnf-gb-Tmb" secondAttribute="centerY" id="Vo3-M9-noU"/>
                                     <constraint firstItem="W4Y-jW-OM4" firstAttribute="leading" secondItem="mnf-gb-Tmb" secondAttribute="trailing" constant="20" id="dqT-jd-esG"/>
@@ -91,6 +108,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="myCollectionView" destination="w4R-oq-70A" id="oRN-In-tHK"/>
+                        <outlet property="titleCollectionView" destination="Gyq-O3-ZhF" id="se1-t9-awP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbg-7q-jug" userLabel="First Responder" sceneMemberID="firstResponder"/>
