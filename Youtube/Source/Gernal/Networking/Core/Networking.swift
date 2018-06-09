@@ -4,7 +4,7 @@
 //
 //  Created by 宋文通 on 2018/5/2.
 //  Copyright © 2018年 tempOrganization. All rights reserved.
-//  http://10.45.20.11:88/interface.md  文档地址
+//  
 
 import Foundation
 import Alamofire
