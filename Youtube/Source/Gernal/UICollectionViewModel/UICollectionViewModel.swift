@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 import CoreGraphics
 protocol UICollectionViewCellModel {//cell
     var reuseId:String{get set}

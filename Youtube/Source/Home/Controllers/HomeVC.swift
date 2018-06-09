@@ -10,11 +10,12 @@ import UIKit
 
 class HomeVC: UIViewController {
 
-    @IBOutlet weak var myTableView: UITableView!
-    var myDataSrouce = HomeTableDataSource()
+    @IBOutlet weak var myCollectionView: UICollectionView!
+    //    @IBOutlet weak var myTableView: UITableView!
+//    var myDataSrouce = HomeTableDataSource()
     override func viewDidLoad() {
         super.viewDidLoad()
-        myTableView.dataSource = myDataSrouce
+//        myTableView.dataSource = myDataSrouce
         // Do any additional setup after loading the view.
         requestData()
     }
