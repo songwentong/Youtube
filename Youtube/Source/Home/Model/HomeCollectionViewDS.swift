@@ -24,11 +24,11 @@ extension HomeCollectionViewDS{
 }
 extension HomeCollectionViewDS:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return collectionModel.sections[0].items.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let model = collectionModel.model(for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: model.reuseId, for: indexPath)
         return cell
     }
 }

@@ -14,8 +14,11 @@ class HomeVC: UIViewController {
     var myds = HomeCollectionViewDS()
     override func viewDidLoad() {
         super.viewDidLoad()
+        registNibs()
         requestData()
         myds.createFadeData()
+        myCollectionView.dataSource = myds
+        myCollectionView.delegate = myds
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +39,9 @@ class HomeVC: UIViewController {
 
 }
 extension HomeVC{
+    func registNibs() -> Void {
+        myCollectionView.register(UINib.init(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeCollectionViewCell")
+    }
     func requestData() -> Void {
         
     }

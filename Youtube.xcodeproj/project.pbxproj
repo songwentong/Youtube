@@ -265,8 +265,8 @@
 		77E2FE5D20CB6FFE00FFF34C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				77965F4220CB699C006C4E0F /* HomeTableDataSource.swift */,
 				77E2FE5B20CB6FCF00FFF34C /* HomeCollectionViewDS.swift */,
+				77965F4220CB699C006C4E0F /* HomeTableDataSource.swift */,
 				77E2FE5E20CB701800FFF34C /* HomeCollectionViewCellModel.swift */,
 			);
 			path = Model;
@@ -280,6 +280,15 @@
 				77E2FE6720CB713900FFF34C /* UICollectionViewCellModel.swift */,
 			);
 			path = UICollectionViewModel;
+			sourceTree = "<group>";
+		};
+		77E2FE6B20CB77A400FFF34C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				77EE700A20858C840065850D /* LaunchScreen.storyboard */,
+				77EE700520858C830065850D /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		77EE6FF520858C830065850D = {
@@ -346,8 +355,7 @@
 		77EE703020858C950065850D /* IB */ = {
 			isa = PBXGroup;
 			children = (
-				77EE700A20858C840065850D /* LaunchScreen.storyboard */,
-				77EE700520858C830065850D /* Main.storyboard */,
+				77E2FE6B20CB77A400FFF34C /* Main */,
 				7743E19520C781AC008806A3 /* FirstSB.storyboard */,
 				7743E19C20C781B9008806A3 /* SecondSB.storyboard */,
 				7743E1A320C781C5008806A3 /* ThirdSB.storyboard */,
