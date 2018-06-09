@@ -15,3 +15,7 @@ protocol UICollectionViewCellModel {//cell
 protocol UICollectionViewCellModelAcceptProtocol {//数据
     var cellModel:UICollectionViewCellModel!{get set}
 }
+class DefaultUICollectionViewCellModel: UICollectionViewCellModel {//默认的实现
+    var reuseId:String = ""
+    var size:CGSize = CGSize.zero
+}

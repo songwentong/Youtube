@@ -9,5 +9,5 @@
 import UIKit
 
 class HomeCollectionViewCellModel: NSObject,UICollectionViewCellModel {
-    var reuseId: String = ""
+    var reuseId: String = "HomeCollectionViewCell"
 }

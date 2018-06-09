@@ -15,6 +15,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         requestData()
+        myds.createFadeData()
     }
 
     override func didReceiveMemoryWarning() {

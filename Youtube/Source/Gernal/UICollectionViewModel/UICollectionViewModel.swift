@@ -8,9 +8,7 @@
 
 import Foundation
 import CoreGraphics
-protocol UICollectionViewSectionModel {//section
-    var items:[UICollectionViewCellModel]{get set}
-}
+
 protocol UICollectionViewModel {
     var sections:[UICollectionViewSectionModel]{get set}
 }
@@ -24,10 +22,4 @@ class DefaultUICollectionViewModel: NSObject,UICollectionViewModel {
         return model
     }
 }
-class DefaultUICollectionViewCellModel: UICollectionViewCellModel {//默认的实现
-    var reuseId:String = ""
-    var size:CGSize = CGSize.zero
-}
-class DefaulUICollectionViewSectionModel: UICollectionViewSectionModel {//默认的section
-    var items:[UICollectionViewCellModel] = []
-}
+

@@ -9,7 +9,18 @@
 import UIKit
 
 class HomeCollectionViewDS: NSObject {
-    
+    var collectionModel = DefaultUICollectionViewModel()
+}
+extension HomeCollectionViewDS{
+    //造点假数据
+    func createFadeData() -> Void {
+        let defaultSection = DefaulUICollectionViewSectionModel()
+        for _ in 0..<10 {
+            let model = HomeCollectionViewCellModel()
+            defaultSection.items.append(model)
+        }
+        collectionModel.sections.append(defaultSection)
+    }
 }
 extension HomeCollectionViewDS:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -20,6 +31,11 @@ extension HomeCollectionViewDS:UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         return cell
     }
-    
-    
+}
+extension HomeCollectionViewDS:UIScrollViewDelegate{}
+extension HomeCollectionViewDS:UICollectionViewDelegate{}
+extension HomeCollectionViewDS:UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        return collectionView.bounds.size
+    }
 }
