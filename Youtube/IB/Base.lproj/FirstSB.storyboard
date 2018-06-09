@@ -31,7 +31,7 @@
         <!--Home-->
         <scene sceneID="Fc7-Oa-Jgt">
             <objects>
-                <viewController id="ItB-4s-EDJ" sceneMemberID="viewController">
+                <viewController id="ItB-4s-EDJ" customClass="HomeVC" customModule="Youtube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9KM-Tw-48M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,18 +62,29 @@
                                     <constraint firstItem="mnf-gb-Tmb" firstAttribute="leading" secondItem="PLb-H9-LP0" secondAttribute="leading" constant="8" id="gJq-Av-XxE"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UoG-Gg-JkH">
+                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PLb-H9-LP0" firstAttribute="top" secondItem="TXJ-1k-ya3" secondAttribute="top" id="CUL-qh-ZbF"/>
+                            <constraint firstItem="UoG-Gg-JkH" firstAttribute="leading" secondItem="TXJ-1k-ya3" secondAttribute="leading" id="DZW-bF-VWs"/>
                             <constraint firstItem="PLb-H9-LP0" firstAttribute="trailing" secondItem="TXJ-1k-ya3" secondAttribute="trailing" id="EwF-XL-CIm"/>
+                            <constraint firstItem="TXJ-1k-ya3" firstAttribute="trailing" secondItem="UoG-Gg-JkH" secondAttribute="trailing" id="TMF-bJ-Vh8"/>
                             <constraint firstItem="PLb-H9-LP0" firstAttribute="leading" secondItem="TXJ-1k-ya3" secondAttribute="leading" id="ubN-r6-hYd"/>
+                            <constraint firstItem="UoG-Gg-JkH" firstAttribute="top" secondItem="PLb-H9-LP0" secondAttribute="bottom" id="v9S-OJ-O8G"/>
+                            <constraint firstItem="TXJ-1k-ya3" firstAttribute="bottom" secondItem="UoG-Gg-JkH" secondAttribute="bottom" id="vV5-Lb-Hym"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TXJ-1k-ya3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="wD9-gc-pRq"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myTableView" destination="UoG-Gg-JkH" id="HR2-rM-ePx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbg-7q-jug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
