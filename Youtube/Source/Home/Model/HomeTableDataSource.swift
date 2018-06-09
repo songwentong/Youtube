@@ -15,10 +15,9 @@ extension HomeTableDataSource:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableModel.sections[0].items.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let model = tableModel.model(for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: model.reuseId, for: indexPath)
         return cell
     }
     

@@ -16,6 +16,10 @@ class DefaultUITableViewModel: UITableViewModel {
     func append( section:UITableViewSectionModel) -> Void {
         sections.append(section)
     }
+    func model(for indexPath:IndexPath) -> UITableViewCellModel {
+        let model = sections[indexPath.section].rows[indexPath.row]
+        return model
+    }
 }
 
 

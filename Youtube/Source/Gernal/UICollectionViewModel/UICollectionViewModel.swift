@@ -19,7 +19,7 @@ protocol UICollectionViewCellSizeModel {//大小
 }
 class DefaultUICollectionViewModel: NSObject,UICollectionViewModel {
     var sections:[UICollectionViewSectionModel] = []
-    func model(for indexPath:NSIndexPath) -> UICollectionViewCellModel {
+    func model(for indexPath:IndexPath) -> UICollectionViewCellModel {
         let model = sections[indexPath.section].items[indexPath.item]
         return model
     }
