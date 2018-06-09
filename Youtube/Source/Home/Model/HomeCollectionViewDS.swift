@@ -12,8 +12,8 @@ class HomeCollectionViewDS: NSObject {
     var collectionModel = DefaultUICollectionViewModel()
 }
 extension HomeCollectionViewDS{
-    //造点假数据
-    func createFadeData() -> Void {
+    //造点默认数据
+    func createDefaultData() -> Void {
         let defaultSection = DefaulUICollectionViewSectionModel()
         for _ in 0..<10 {
             let model = HomeCollectionViewCellModel()

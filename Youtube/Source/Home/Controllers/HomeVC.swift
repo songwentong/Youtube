@@ -16,7 +16,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         registNibs()
         requestData()
-        myds.createFadeData()
+        myds.createDefaultData()
         myCollectionView.dataSource = myds
         myCollectionView.delegate = myds
     }

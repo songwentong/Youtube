@@ -19,22 +19,33 @@
                 <rect key="frame" x="0.0" y="0.0" width="415" height="399"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ji6-XL-2d8">
-                        <rect key="frame" x="87" y="135" width="240" height="128"/>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mbm-9d-kb6">
+                        <rect key="frame" x="0.0" y="0.0" width="415" height="399"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tableView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjY-fa-8uE">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                         <color key="backgroundColor" red="0.1843137255" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="240" id="4dJ-re-L9t"/>
-                            <constraint firstAttribute="height" constant="128" id="JYH-Eb-KFL"/>
+                            <constraint firstAttribute="width" constant="100" id="gFo-sr-qJ1"/>
+                            <constraint firstAttribute="height" constant="100" id="tVO-wj-3S0"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="ji6-XL-2d8" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="KCg-UH-XC2"/>
-                <constraint firstItem="ji6-XL-2d8" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="mIw-98-xcX"/>
+                <constraint firstItem="mbm-9d-kb6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Qb6-J5-vTm"/>
+                <constraint firstAttribute="bottom" secondItem="mbm-9d-kb6" secondAttribute="bottom" id="VuM-Rq-nVq"/>
+                <constraint firstAttribute="trailing" secondItem="mbm-9d-kb6" secondAttribute="trailing" id="dwE-uc-k94"/>
+                <constraint firstItem="tjY-fa-8uE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="g87-LA-mh2"/>
+                <constraint firstItem="mbm-9d-kb6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="iG4-hO-CLE"/>
+                <constraint firstItem="tjY-fa-8uE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vLm-YN-KHa"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="415" height="399"/>
+            <connections>
+                <outlet property="myTableView" destination="mbm-9d-kb6" id="WjR-Kh-wsQ"/>
+            </connections>
             <point key="canvasLocation" x="-77.5" y="30.5"/>
         </collectionViewCell>
     </objects>
