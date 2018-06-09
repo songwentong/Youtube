@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		162FB6C9252C1BD70D2AB689 /* Pods_Youtube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C466C1BEDF972DC14EB8E99F /* Pods_Youtube.framework */; };
 		2DBA584537315E766CADB062 /* Pods_YoutubeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D272CA6330DD90BC1337EF /* Pods_YoutubeTests.framework */; };
+		7742D3B620CBA35100102120 /* PreferencesSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742D3B820CBA35100102120 /* PreferencesSB.storyboard */; };
 		7743E18D20C78042008806A3 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7743E18C20C78042008806A3 /* HomeVC.swift */; };
 		7743E19320C781AC008806A3 /* FirstSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7743E19520C781AC008806A3 /* FirstSB.storyboard */; };
 		7743E19A20C781B9008806A3 /* SecondSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7743E19C20C781B9008806A3 /* SecondSB.storyboard */; };
@@ -68,6 +69,9 @@
 		25D9B6E4DBF697672E5E65B0 /* Pods-YoutubeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeUITests/Pods-YoutubeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		53D272CA6330DD90BC1337EF /* Pods_YoutubeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F126C13255AC9BFE8ED962 /* Pods-Youtube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youtube/Pods-Youtube.release.xcconfig"; sourceTree = "<group>"; };
+		7742D3B720CBA35100102120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PreferencesSB.storyboard; sourceTree = "<group>"; };
+		7742D3BA20CBA35300102120 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/PreferencesSB.strings"; sourceTree = "<group>"; };
+		7742D3BC20CBA35500102120 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/PreferencesSB.strings"; sourceTree = "<group>"; };
 		7743E18C20C78042008806A3 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		7743E19020C78185008806A3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		7743E19220C7818A008806A3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -360,6 +364,7 @@
 				7743E19C20C781B9008806A3 /* SecondSB.storyboard */,
 				7743E1A320C781C5008806A3 /* ThirdSB.storyboard */,
 				7743E1AA20C781CD008806A3 /* FourthSB.storyboard */,
+				7742D3B820CBA35100102120 /* PreferencesSB.storyboard */,
 			);
 			path = IB;
 			sourceTree = "<group>";
@@ -497,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7743E19A20C781B9008806A3 /* SecondSB.storyboard in Resources */,
+				7742D3B620CBA35100102120 /* PreferencesSB.storyboard in Resources */,
 				77EE700C20858C840065850D /* LaunchScreen.storyboard in Resources */,
 				77EE700920858C840065850D /* Assets.xcassets in Resources */,
 				7743E19320C781AC008806A3 /* FirstSB.storyboard in Resources */,
@@ -690,6 +696,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7742D3B820CBA35100102120 /* PreferencesSB.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7742D3B720CBA35100102120 /* Base */,
+				7742D3BA20CBA35300102120 /* zh-Hans */,
+				7742D3BC20CBA35500102120 /* zh-Hant */,
+			);
+			name = PreferencesSB.storyboard;
+			sourceTree = "<group>";
+		};
 		7743E19520C781AC008806A3 /* FirstSB.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
