@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreGraphics
 import UIKit
 //row model protocol
 protocol UITableViewCellModel {
@@ -29,4 +28,13 @@ class DefaultTableViewCellModel:UITableViewCellModel,UITableViewCellHeightProtoc
     var heightForRow: CGFloat = UITableViewAutomaticDimension//行高
     var reuseIdentifier: String = ""//重用ID
     var clickEvent:(()->Void) = {}//点击事件
+}
+extension UITableView{
+    func dequeueReusableCell(withModel cellModel:UITableViewCellModel, for indexPath: IndexPath) -> UITableViewCell{
+        let cell = dequeueReusableCell(withIdentifier: cellModel.reuseIdentifier, for: indexPath)
+        if var pc = cell as? UITableViewCellModelAcceptable{
+            pc.cellModel = cellModel
+        }
+        return cell
+    }
 }

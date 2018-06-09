@@ -26,6 +26,9 @@ extension HomeCollectionViewCell{
     }
 }
 extension HomeCollectionViewCell:UITableViewDataSource{
+    func numberOfSections(in tableView: UITableView) -> Int{
+        return tableModel.sections.count
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableModel.sections[0].rows.count
     }

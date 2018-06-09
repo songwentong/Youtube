@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreGraphics
-
+import UIKit
 protocol UICollectionViewModel {
     var sections:[UICollectionViewSectionModel]{get set}
 }
@@ -22,4 +22,12 @@ class DefaultUICollectionViewModel: NSObject,UICollectionViewModel {
         return model
     }
 }
-
+extension UICollectionView{
+    func dequeueReusableCell(withReuseIdentifier model: UICollectionViewCellModel, for indexPath: IndexPath) -> UICollectionViewCell{
+        let cell = dequeueReusableCell(withReuseIdentifier: model.reuseId, for: indexPath)
+        if var pc = cell as? UICollectionViewCellModelAcceptProtocol{
+            pc.cellModel = model
+        }
+        return cell
+    }
+}
