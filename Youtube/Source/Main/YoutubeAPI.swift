@@ -7,3 +7,4 @@
 //
 
 import Foundation
+let youtuBeAPIKey = "AIzaSyBk4yc7QyMyn7CCNCIhWNAHf4hWtjHLrXs"
