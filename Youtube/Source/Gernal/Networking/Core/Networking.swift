@@ -36,24 +36,19 @@ extension Networking {
                                     finished:  (T)->Void,
                                     failed:  (NetWorkingError)->Void) -> Void {
         guard dataResponse.error == nil else{
-            failed(NetWorkingError(type: .networkError, code: ReturnCode.success))//网络异常
+            failed(NetWorkingError(type: .networkError, code: 0))//网络异常
             return
         }
         guard let data = dataResponse.data else{
-            failed(NetWorkingError(type: .unknown, code: ReturnCode.success))//没有数据,未知异常
+            failed(NetWorkingError(type: .unknown, code: 0))//没有数据,未知异常
             return
         }
         do{
             let code = try JSONDecoder().decode(CommonResponse<EmptyModel>.self, from: data)//校验响应码
             self.serverTime = code.timestamp
-            if code.returnCode == .success {
+            if code.returnCode == 0 {
                 let detailResponseModel = try JSONDecoder().decode(CommonResponse<T>.self, from: data)//解析数据
-                if let responseData = detailResponseModel.responseData{
-                    finished(responseData)//正确解析
-                    //                        window.showHud(with: "正确解析")
-                }else{
-                    failed(NetWorkingError(type: .analyzeFailed, code: ReturnCode.success))//解析失败
-                }
+                finished(detailResponseModel.responseData)//正确解析
             }else{
                 failed(NetWorkingError(type: .networkError, code: code.returnCode))
                 let string = String.init(data: data, encoding: .utf8)
@@ -63,7 +58,7 @@ extension Networking {
             let string = String.init(data: data, encoding: .utf8)
             newsPrint("string:\(String(describing: string))")
             newsPrint("\(error)")
-            failed(NetWorkingError(type: .analyzeFailed, code: ReturnCode.success))
+            failed(NetWorkingError(type: .analyzeFailed, code: 0))
         }
         
     }
@@ -130,10 +125,10 @@ extension Networking {
 }
 //常规响应
 struct CommonResponse<T: Codable>: Codable {
-    let returnCode: ReturnCode
+    let returnCode: Int
     let message: String
     let timestamp: Int
-    let responseData: T?
+    let responseData: T
     
     enum CodingKeys: String, CodingKey {
         case returnCode = "ret"

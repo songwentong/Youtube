@@ -9,11 +9,11 @@
 import Foundation
 struct NetWorkingError {
     var type:NetworkingErrorType
-    var code:ReturnCode
+    var code:Int
 }
 extension NetWorkingError{
     static func unknownError()->NetWorkingError{
-        return NetWorkingError.init(type: .unknown, code: ReturnCode.success)
+        return NetWorkingError.init(type: .unknown, code: 0)
     }
 }
 enum NetworkingErrorType: Error {
