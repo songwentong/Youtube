@@ -10,6 +10,9 @@ import UIKit
 struct CategoryModel:Codable {
     var title:String
 }
+struct VideoModel:Codable {
+    
+}
 extension CategoryModel{
     static func testModelList() -> [CategoryModel] {
         var list = [CategoryModel]()

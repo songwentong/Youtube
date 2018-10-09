@@ -11,22 +11,26 @@ import UIKit
 class HomeVC: UIViewController {
 
     @IBOutlet weak var titleCollectionView: UICollectionView!//标题
-    @IBOutlet weak var myCollectionView: UICollectionView!//
-    var myds = HomeCollectionViewDS()
-    var titleDS = HomeTitleDS()
+    @IBOutlet weak var myTableView: UITableView!//列表
+    var collectionViewModel = DefaultUICollectionViewModel()
+    var tableViewModel = DefaultUITableViewModel()
     var titleList:[CategoryModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         registNibs()
         requestData()
-        myds.createDefaultData()
-        myCollectionView.dataSource = myds
-        myCollectionView.delegate = myds
-        titleCollectionView.dataSource = titleDS
-        titleCollectionView.delegate = titleDS
+        configTestData()
+    }
+    func configTestData() -> Void {
         titleList = CategoryModel.testModelList()
-        titleDS.titleList = titleList
-        titleCollectionView.reloadData()
+        let list = titleList.map { (model) -> HomeTitleModel in
+            let m = HomeTitleModel.init()
+            m.model = model
+            return m
+        }
+        let section = DefaulUICollectionViewSectionModel.init()
+        section.items.append(contentsOf: list)
+        collectionViewModel.sections.append(section)
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +53,6 @@ class HomeVC: UIViewController {
 extension HomeVC{
     func registNibs() -> Void {
         titleCollectionView.register(UINib.init(nibName: "HomeTitleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeTitleCollectionViewCell")
-        myCollectionView.register(UINib.init(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeCollectionViewCell")
     }
     func requestData() -> Void {
         
@@ -58,3 +61,28 @@ extension HomeVC{
         
     }
 }
+extension HomeVC:UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+        return collectionViewModel.sections.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+        let model = collectionViewModel.model(for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: model, for: indexPath)
+        return cell
+    }
+}
+extension HomeVC:UITableViewDelegate{
+    
+}
+extension HomeVC:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let model = tableViewModel.model(for: indexPath)
+        return tableView.dequeueReusableCell(withModel: model, for: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return tableViewModel.sections.count
+    }
+}
+
