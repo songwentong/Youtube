@@ -10,8 +10,8 @@ import UIKit
 
 class HomeVC: UIViewController {
 
-    @IBOutlet weak var titleCollectionView: UICollectionView!
-    @IBOutlet weak var myCollectionView: UICollectionView!
+    @IBOutlet weak var titleCollectionView: UICollectionView!//标题
+    @IBOutlet weak var myCollectionView: UICollectionView!//
     var myds = HomeCollectionViewDS()
     var titleDS = HomeTitleDS()
     var titleList:[CategoryModel] = []
@@ -24,17 +24,9 @@ class HomeVC: UIViewController {
         myCollectionView.delegate = myds
         titleCollectionView.dataSource = titleDS
         titleCollectionView.delegate = titleDS
-        titleList = tempCategoryList()
+        titleList = CategoryModel.testModelList()
         titleDS.titleList = titleList
         titleCollectionView.reloadData()
-    }
-    func tempCategoryList() -> [CategoryModel] {
-        var list = [CategoryModel]()
-        for i in 0..<10{
-            let cat = CategoryModel.init(title: "title\(i)")
-            list.append(cat)
-        }
-        return list
     }
 
     override func didReceiveMemoryWarning() {
