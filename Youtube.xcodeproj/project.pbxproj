@@ -32,6 +32,7 @@
 		779341B1216C859300854DE1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779341B0216C859300854DE1 /* TestViewController.swift */; };
 		779341B3216C85E800854DE1 /* DemoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779341B2216C85E800854DE1 /* DemoStoryboard.storyboard */; };
 		779341B5216C85F800854DE1 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779341B4216C85F800854DE1 /* DemoViewController.swift */; };
+		779341B8216C86B600854DE1 /* res.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779341B7216C86B600854DE1 /* res.swift */; };
 		77965F4320CB699C006C4E0F /* HomeTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77965F4220CB699C006C4E0F /* HomeTableDataSource.swift */; };
 		77965F4E20CB6B69006C4E0F /* UITableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77965F4720CB6B68006C4E0F /* UITableViewModel.swift */; };
 		77965F4F20CB6B69006C4E0F /* DefaultUITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77965F4820CB6B68006C4E0F /* DefaultUITableViewDataSource.swift */; };
@@ -119,6 +120,7 @@
 		779341B0216C859300854DE1 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		779341B2216C85E800854DE1 /* DemoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DemoStoryboard.storyboard; sourceTree = "<group>"; };
 		779341B4216C85F800854DE1 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		779341B7216C86B600854DE1 /* res.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = res.swift; sourceTree = "<group>"; };
 		77965F4220CB699C006C4E0F /* HomeTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableDataSource.swift; sourceTree = "<group>"; };
 		77965F4720CB6B68006C4E0F /* UITableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewModel.swift; sourceTree = "<group>"; };
 		77965F4820CB6B68006C4E0F /* DefaultUITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultUITableViewDataSource.swift; sourceTree = "<group>"; };
@@ -295,6 +297,14 @@
 			path = More;
 			sourceTree = "<group>";
 		};
+		779341B6216C869800854DE1 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				779341B7216C86B600854DE1 /* res.swift */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
 		77965F4120CB6983006C4E0F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +434,7 @@
 		77EE700020858C830065850D /* Youtube */ = {
 			isa = PBXGroup;
 			children = (
+				779341B6216C869800854DE1 /* Documents */,
 				77EE702F20858C8F0065850D /* Source */,
 				77EE703020858C950065850D /* IB */,
 				77EE703120858CB90065850D /* Resource */,
@@ -652,6 +663,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -661,6 +673,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -760,6 +773,7 @@
 				770BF28620CBBF59007B7797 /* HomeTitleDS.swift in Sources */,
 				77965F5220CB6B69006C4E0F /* SeparateLineTableViewCell.swift in Sources */,
 				776F4FEF21096239003DB638 /* NetworkingError.swift in Sources */,
+				779341B8216C86B600854DE1 /* res.swift in Sources */,
 				77E2FE5F20CB701800FFF34C /* HomeCollectionViewCellModel.swift in Sources */,
 				77E2FE6A20CB746100FFF34C /* UICollectionViewSectionModel.swift in Sources */,
 				7743E18D20C78042008806A3 /* HomeVC.swift in Sources */,
@@ -1009,10 +1023,7 @@
 				DEVELOPMENT_TEAM = QZFW9RQ778;
 				INFOPLIST_FILE = Youtube/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abc.Youtube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1029,10 +1040,7 @@
 				DEVELOPMENT_TEAM = QZFW9RQ778;
 				INFOPLIST_FILE = Youtube/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abc.Youtube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1049,11 +1057,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QZFW9RQ778;
 				INFOPLIST_FILE = YoutubeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abc.YoutubeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1071,11 +1075,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QZFW9RQ778;
 				INFOPLIST_FILE = YoutubeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abc.YoutubeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1092,11 +1092,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QZFW9RQ778;
 				INFOPLIST_FILE = YoutubeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abc.YoutubeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1113,11 +1109,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QZFW9RQ778;
 				INFOPLIST_FILE = YoutubeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abc.YoutubeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

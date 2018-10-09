@@ -17,9 +17,26 @@
                     <view key="view" contentMode="scaleToFill" id="bsS-HB-kgp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvR-0v-0O3" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="ZUW-th-bxr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nvR-0v-0O3" firstAttribute="leading" secondItem="cs3-hb-D21" secondAttribute="leading" id="7aN-4a-quf"/>
+                            <constraint firstItem="nvR-0v-0O3" firstAttribute="top" secondItem="cs3-hb-D21" secondAttribute="top" id="TqD-Qk-odC"/>
+                            <constraint firstItem="cs3-hb-D21" firstAttribute="trailing" secondItem="nvR-0v-0O3" secondAttribute="trailing" id="WSS-co-EwQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cs3-hb-D21"/>
                     </view>
+                    <connections>
+                        <outlet property="demoPlayerView" destination="nvR-0v-0O3" id="C08-aB-ohe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ni-pb-NSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

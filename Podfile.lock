@@ -41,12 +41,14 @@ PODS:
   - GTMSessionFetcher/Full (1.2.0):
     - GTMSessionFetcher/Core (= 1.2.0)
   - Kingfisher (4.10.0)
+  - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - Google/SignIn (~> 3.0.3)
   - GoogleAPIClientForREST/YouTube (~> 1.2.1)
   - Kingfisher (~> 4.0)
+  - youtube-ios-player-helper (~> 0.1.4)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -61,6 +63,7 @@ SPEC REPOS:
     - GTMOAuth2
     - GTMSessionFetcher
     - Kingfisher
+    - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -74,7 +77,8 @@ SPEC CHECKSUMS:
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
   Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 9b4ca19f2aa15b9db65108248624bef1aed2ba06
+PODFILE CHECKSUM: 6b8b8abe7648e2f92fedb524f84c211e4357f683
 
 COCOAPODS: 1.5.3
