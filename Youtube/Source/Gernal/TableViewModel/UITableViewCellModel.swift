@@ -25,7 +25,7 @@ protocol UITableViewCellSelection:UITableViewCellModel {
 }
 //row 的默认实例
 class DefaultTableViewCellModel:UITableViewCellModel,UITableViewCellHeightProtocol,UITableViewCellSelection {
-    var heightForRow: CGFloat = UITableViewAutomaticDimension//行高
+    var heightForRow: CGFloat = UITableView.automaticDimension//行高
     var reuseIdentifier: String = ""//重用ID
     var clickEvent:(()->Void) = {}//点击事件
 }

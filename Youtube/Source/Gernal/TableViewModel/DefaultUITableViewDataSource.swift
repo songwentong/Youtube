@@ -30,7 +30,7 @@ class DefaultUITableViewDataSource:NSObject, UITableViewDataSource, UITableViewD
         if let cellModel = tableViewModel.sections[indexPath.section].rows[indexPath.row] as? UITableViewCellHeightProtocol{
             return cellModel.heightForRow
         }
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
 }
 
