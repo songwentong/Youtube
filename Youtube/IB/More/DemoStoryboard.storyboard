@@ -13,7 +13,7 @@
         <!--Demo View Controller-->
         <scene sceneID="pv3-En-mfc">
             <objects>
-                <viewController id="Inn-He-CzP" customClass="DemoViewController" customModule="Youtube" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="Inn-He-CzP" customClass="DemoViewController" customModule="Youtube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bsS-HB-kgp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
