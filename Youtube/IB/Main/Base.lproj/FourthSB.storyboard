@@ -23,7 +23,7 @@
                     <navigationItem key="navigationItem" id="XKh-id-odn">
                         <barButtonItem key="rightBarButtonItem" title="test" id="vFh-Pp-Qwi">
                             <connections>
-                                <segue destination="wHh-vH-Fkr" kind="show" id="4Sn-6P-j6l"/>
+                                <segue destination="geq-4u-rc0" kind="show" id="Hm4-8A-lgS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -40,6 +40,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nhf-mO-wIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2837" y="-349"/>
+        </scene>
+        <!--DemoStoryboard-->
+        <scene sceneID="j3v-4d-hb2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DemoStoryboard" id="geq-4u-rc0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gG7-9C-v5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2845" y="-279"/>
         </scene>
         <!--ME-->
         <scene sceneID="Dsx-aw-RC9">

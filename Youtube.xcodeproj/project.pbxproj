@@ -30,6 +30,8 @@
 		776F4FF421096239003DB638 /* WebURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776F4FA121096239003DB638 /* WebURLs.swift */; };
 		779341AD216C853500854DE1 /* TestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779341AC216C853500854DE1 /* TestStoryboard.storyboard */; };
 		779341B1216C859300854DE1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779341B0216C859300854DE1 /* TestViewController.swift */; };
+		779341B3216C85E800854DE1 /* DemoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779341B2216C85E800854DE1 /* DemoStoryboard.storyboard */; };
+		779341B5216C85F800854DE1 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779341B4216C85F800854DE1 /* DemoViewController.swift */; };
 		77965F4320CB699C006C4E0F /* HomeTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77965F4220CB699C006C4E0F /* HomeTableDataSource.swift */; };
 		77965F4E20CB6B69006C4E0F /* UITableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77965F4720CB6B68006C4E0F /* UITableViewModel.swift */; };
 		77965F4F20CB6B69006C4E0F /* DefaultUITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77965F4820CB6B68006C4E0F /* DefaultUITableViewDataSource.swift */; };
@@ -115,6 +117,8 @@
 		776F4FA121096239003DB638 /* WebURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebURLs.swift; sourceTree = "<group>"; };
 		779341AC216C853500854DE1 /* TestStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestStoryboard.storyboard; sourceTree = "<group>"; };
 		779341B0216C859300854DE1 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		779341B2216C85E800854DE1 /* DemoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DemoStoryboard.storyboard; sourceTree = "<group>"; };
+		779341B4216C85F800854DE1 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		77965F4220CB699C006C4E0F /* HomeTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableDataSource.swift; sourceTree = "<group>"; };
 		77965F4720CB6B68006C4E0F /* UITableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewModel.swift; sourceTree = "<group>"; };
 		77965F4820CB6B68006C4E0F /* DefaultUITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultUITableViewDataSource.swift; sourceTree = "<group>"; };
@@ -277,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				779341AC216C853500854DE1 /* TestStoryboard.storyboard */,
+				779341B2216C85E800854DE1 /* DemoStoryboard.storyboard */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				779341B0216C859300854DE1 /* TestViewController.swift */,
+				779341B4216C85F800854DE1 /* DemoViewController.swift */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -607,6 +613,7 @@
 				7743E19320C781AC008806A3 /* FirstSB.storyboard in Resources */,
 				77EE700720858C830065850D /* Main.storyboard in Resources */,
 				77E2FE6620CB710900FFF34C /* HomeCollectionViewCell.xib in Resources */,
+				779341B3216C85E800854DE1 /* DemoStoryboard.storyboard in Resources */,
 				7743E1A820C781CD008806A3 /* FourthSB.storyboard in Resources */,
 				77965F5120CB6B69006C4E0F /* SeparateLineTableViewCell.xib in Resources */,
 				779341AD216C853500854DE1 /* TestStoryboard.storyboard in Resources */,
@@ -768,6 +775,7 @@
 				77E2FE5A20CB6E8E00FFF34C /* Dictionary.swift in Sources */,
 				77E2FE6820CB713900FFF34C /* UICollectionViewCellModel.swift in Sources */,
 				776F4FF221096239003DB638 /* ServerMethod.swift in Sources */,
+				779341B5216C85F800854DE1 /* DemoViewController.swift in Sources */,
 				77EE700220858C830065850D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
