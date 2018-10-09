@@ -28,6 +28,8 @@
 		776F4FF221096239003DB638 /* ServerMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776F4F9E21096238003DB638 /* ServerMethod.swift */; };
 		776F4FF321096239003DB638 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776F4F9F21096238003DB638 /* DataRequest.swift */; };
 		776F4FF421096239003DB638 /* WebURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776F4FA121096239003DB638 /* WebURLs.swift */; };
+		779341AD216C853500854DE1 /* TestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779341AC216C853500854DE1 /* TestStoryboard.storyboard */; };
+		779341B1216C859300854DE1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779341B0216C859300854DE1 /* TestViewController.swift */; };
 		77965F4320CB699C006C4E0F /* HomeTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77965F4220CB699C006C4E0F /* HomeTableDataSource.swift */; };
 		77965F4E20CB6B69006C4E0F /* UITableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77965F4720CB6B68006C4E0F /* UITableViewModel.swift */; };
 		77965F4F20CB6B69006C4E0F /* DefaultUITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77965F4820CB6B68006C4E0F /* DefaultUITableViewDataSource.swift */; };
@@ -111,6 +113,8 @@
 		776F4F9E21096238003DB638 /* ServerMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerMethod.swift; sourceTree = "<group>"; };
 		776F4F9F21096238003DB638 /* DataRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
 		776F4FA121096239003DB638 /* WebURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebURLs.swift; sourceTree = "<group>"; };
+		779341AC216C853500854DE1 /* TestStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestStoryboard.storyboard; sourceTree = "<group>"; };
+		779341B0216C859300854DE1 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		77965F4220CB699C006C4E0F /* HomeTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableDataSource.swift; sourceTree = "<group>"; };
 		77965F4720CB6B68006C4E0F /* UITableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewModel.swift; sourceTree = "<group>"; };
 		77965F4820CB6B68006C4E0F /* DefaultUITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultUITableViewDataSource.swift; sourceTree = "<group>"; };
@@ -269,6 +273,22 @@
 			path = URLs;
 			sourceTree = "<group>";
 		};
+		779341AB216C852100854DE1 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				779341AC216C853500854DE1 /* TestStoryboard.storyboard */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		779341AF216C857900854DE1 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				779341B0216C859300854DE1 /* TestViewController.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
 		77965F4120CB6983006C4E0F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +383,10 @@
 		77E2FE6B20CB77A400FFF34C /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				7743E19520C781AC008806A3 /* FirstSB.storyboard */,
+				7743E19C20C781B9008806A3 /* SecondSB.storyboard */,
+				7743E1A320C781C5008806A3 /* ThirdSB.storyboard */,
+				7743E1AA20C781CD008806A3 /* FourthSB.storyboard */,
 				77EE700A20858C840065850D /* LaunchScreen.storyboard */,
 				77EE700520858C830065850D /* Main.storyboard */,
 			);
@@ -427,6 +451,7 @@
 				7742D3BD20CBA37B00102120 /* Preferences */,
 				77965F4420CB6B17006C4E0F /* Gernal */,
 				7743E18B20C78032008806A3 /* Home */,
+				779341AF216C857900854DE1 /* More */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -435,10 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				77E2FE6B20CB77A400FFF34C /* Main */,
-				7743E19520C781AC008806A3 /* FirstSB.storyboard */,
-				7743E19C20C781B9008806A3 /* SecondSB.storyboard */,
-				7743E1A320C781C5008806A3 /* ThirdSB.storyboard */,
-				7743E1AA20C781CD008806A3 /* FourthSB.storyboard */,
+				779341AB216C852100854DE1 /* More */,
 				7742D3B820CBA35100102120 /* PreferencesSB.storyboard */,
 			);
 			path = IB;
@@ -587,6 +609,7 @@
 				77E2FE6620CB710900FFF34C /* HomeCollectionViewCell.xib in Resources */,
 				7743E1A820C781CD008806A3 /* FourthSB.storyboard in Resources */,
 				77965F5120CB6B69006C4E0F /* SeparateLineTableViewCell.xib in Resources */,
+				779341AD216C853500854DE1 /* TestStoryboard.storyboard in Resources */,
 				7743E1A120C781C5008806A3 /* ThirdSB.storyboard in Resources */,
 				77E2FE4A20CB6DA900FFF34C /* VideoTableViewCell.xib in Resources */,
 			);
@@ -726,6 +749,7 @@
 				77965F5320CB6B69006C4E0F /* UITableViewSectionModel.swift in Sources */,
 				77E2FE5720CB6E6900FFF34C /* print.swift in Sources */,
 				77E2FE4920CB6DA900FFF34C /* VideoTableViewCell.swift in Sources */,
+				779341B1216C859300854DE1 /* TestViewController.swift in Sources */,
 				770BF28620CBBF59007B7797 /* HomeTitleDS.swift in Sources */,
 				77965F5220CB6B69006C4E0F /* SeparateLineTableViewCell.swift in Sources */,
 				776F4FEF21096239003DB638 /* NetworkingError.swift in Sources */,
@@ -1015,6 +1039,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZFW9RQ778;
 				INFOPLIST_FILE = YoutubeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1036,6 +1061,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZFW9RQ778;
 				INFOPLIST_FILE = YoutubeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1056,6 +1082,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZFW9RQ778;
 				INFOPLIST_FILE = YoutubeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1076,6 +1103,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZFW9RQ778;
 				INFOPLIST_FILE = YoutubeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
