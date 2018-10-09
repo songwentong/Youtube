@@ -35,6 +35,13 @@ enum ReturnCode: Int, Codable {
     case guideRecallInvalid = 233   //徒弟未流失
     case amountNotAllow     = 234   // 提现金额不允许
     case amountConditionFail = 235  // 提现金额条件不满足
+    case wxHasBindedOtherAccount = 236  // 微信已绑定其他账号
+    case withdrawMaxTimes = 238     // 提现次数超限
+    case commentLikeTooFrequently = 241 //评论点赞太频繁
+    case changePhoneLessThan30Days = 243 //更换手机时间小于30天
+    case launchgiftovertoday = 244 // 今日已经领过启动红包
+    case launchgiftinvalid = 245 // 启动红包数额无效
+    case banWord                    //含有敏感词汇
 }
 
 
