@@ -11,18 +11,7 @@ struct NetWorkingError {
     var type:NetworkingErrorType
     var code:ReturnCode?
     
-    func defaultHint(dealReturnCode:((Int) -> Void)? = nil) -> Void {
-        switch self.type {
-        case .networkError :
-            CGActivityView.showInfo(text: "网络异常，请检查您的网络设置！", pos: .Mid)
-        case .analyzeFailed :
-            CGActivityView.showInfo(text: "解析失败", pos: .Mid)
-        case .unknown:
-            CGActivityView.showInfo(text: "未知错误", pos: .Mid)
-        case .returnCode(let code):
-            dealReturnCode?(code)
-        }
-    }
+
 
 }
 extension NetWorkingError{

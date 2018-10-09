@@ -112,9 +112,6 @@ extension Networking{
     //默认header
     func defaultHttpHeaders() -> HTTPHeaders {
         var headers = HTTPHeaders()
-        if let token = AccountManager.shared.userToken {
-            headers["token"] = token
-        }
         return headers
     }
 }
