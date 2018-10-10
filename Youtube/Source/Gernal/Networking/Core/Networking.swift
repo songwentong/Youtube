@@ -11,7 +11,7 @@ import Alamofire
 typealias APIParameters = [String: Any]//参数
 
 final class Networking {
-    open var serverTime: Int?
+    public var serverTime: Int?
     var hostURL:String = ""
     var reachabilityManager:NetworkReachabilityManager?
     init() {
@@ -20,21 +20,13 @@ final class Networking {
     
 }
 extension Networking{
-    open static let `default`: Networking = {
+    public static let `default`: Networking = {
         let ntw = Networking()
         ntw.startReachability()
         return ntw
     }()
     func initHost() -> String {
-        #if DEBUG //开发用
         return Domain.testServer.rawValue
-//        return Domain.releaseServer.rawValue
-        #elseif ADHOC //给测试看(蒲公英)
-        return Domain.testServer.rawValue
-//        return Domain.releaseServer.rawValue
-        #else //发版
-        return Domain.releaseServer.rawValue
-        #endif
     }
     func switchHotsURL() -> Void {
         let test = Domain.testServer.rawValue

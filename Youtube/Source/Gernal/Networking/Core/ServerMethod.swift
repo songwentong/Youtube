@@ -9,10 +9,8 @@
 import Foundation
 //域名
 enum Domain:String {
-    case testServer = "http://10.45.20.11:88"//测试服务器
-    case releaseServer = "https://api.mobigroup.cn"//正式服务器
-    case fengkongcloudAPI = "http://api.fengkongcloud.com/v2/event" //数美
-    case h5Host = "https://s.mobigroup.cn"//h5-release
+    case testServer = "https://www.googleapis.com/youtube/v3"//youtubev3服务器
+    case releaseServer = ""//正式服务器
 }
 //接口名
 enum ServerMethod: String {
