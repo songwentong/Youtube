@@ -9,7 +9,7 @@
 import Foundation
 struct NetWorkingError {
     var type:NetworkingErrorType
-    var code:ReturnCode?
+    var code:ReturnCode
     
 
 

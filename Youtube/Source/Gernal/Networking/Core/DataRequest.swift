@@ -13,7 +13,7 @@ extension DataRequest{
     func convert<T: Codable>(finished: @escaping (T)->Void,
                              failed: @escaping (NetWorkingError)->Void) -> Void {
         response { (response) in
-            if let error = response.error{
+            if response.error != nil{
                 failed(NetWorkingError.networkError())//有网络错误
                 return
             }
@@ -37,10 +37,8 @@ extension DataRequest{
     func convertDetailType<T:Codable>(result: @escaping (T)->Void,
                                     failed: @escaping (NetWorkingError)->Void) -> Void{
         convert(finished: { [weak self](common:CommonResponse<EmptyModel>) in
-            Networking.default.serverTime = common.timestamp
-            guard common.returnCode == ReturnCode.success.rawValue else{//return Code异常
-                ErrorCodeDispose.errorCodeDispose(errorCode: ReturnCode(rawValue: common.returnCode))
-                let error = NetWorkingError.init(type: NetworkingErrorType.returnCode(common.returnCode), code: ReturnCode(rawValue: common.returnCode))
+            guard common.code == ReturnCode.success.rawValue else{//return Code异常
+                let error = NetWorkingError.init(type: NetworkingErrorType.returnCode(common.code), code: common.code.convertToReturnCode())
                 failed(error)
                 return
             }
@@ -49,12 +47,5 @@ extension DataRequest{
             }, failed: failed)
             
         }, failed: failed)
-    }
-    
-    struct ErrorCodeDispose {
-        static func errorCodeDispose(errorCode: ReturnCode?) {
-            if errorCode == .notLogin {
-            }
-        }
     }
 }

@@ -113,17 +113,10 @@ extension Networking {
 }
 //常规响应
 struct CommonResponse<T: Codable>: Codable {
-    let returnCode: Int
+    let code: Int
+//    let error: Int
     let message: String
-    let timestamp: Int
     let responseData: T
-
-    enum CodingKeys: String, CodingKey {
-        case returnCode = "ret"
-        case message = "msg"
-        case responseData = "data"
-        case timestamp = "timestamp"
-    }
 }
 
 //空对象,用于只需要return code的请求

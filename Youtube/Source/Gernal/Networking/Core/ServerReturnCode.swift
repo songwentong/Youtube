@@ -12,36 +12,16 @@ import Foundation
  *  其他code根据不同业务决定前端是否需要提示用户
  */
 enum ReturnCode: Int, Codable {
-    case success            = 0     //成功
-    case paramError         = 101   //参数错误
-    case notLogin           = 102   //没有登录
-    case vcodeError         = 103   //验证码错误
-    case smsError           = 104   //短信通道错误
-    case userNotExist       = 201   //用户不存在
-    case newBoxHasGet       = 202   //新手宝箱已领
-    case newBoxNotExist     = 203   //新手宝箱不存在
-    case guideHasGet        = 211   //已经有师傅
-    case guideCannotBeSelf  = 212   //不能拜自己为师
-    case guideCodeInvalid   = 213   //无效师徒码
-    case guideReachLimit    = 214   //徒弟数量到上线
-    case commentTooLong     = 215   //评论太长
-    case signDayError       = 221   //签到天数错误
-    case treasureCoolDown   = 222   //宝箱未到冷却时间
-    case taskHadGot         = 223   //已经领取任务奖励
-    case taskNotComplete    = 224   //任务未完成
-    case guideRecallCD      = 230   //唤醒徒弟CD
-    case guideThankCD       = 231   //感谢徒弟CD
-    case guideRemindCD      = 232   //提醒徒弟CD
-    case guideRecallInvalid = 233   //徒弟未流失
-    case amountNotAllow     = 234   // 提现金额不允许
-    case amountConditionFail = 235  // 提现金额条件不满足
-    case wxHasBindedOtherAccount = 236  // 微信已绑定其他账号
-    case withdrawMaxTimes = 238     // 提现次数超限
-    case commentLikeTooFrequently = 241 //评论点赞太频繁
-    case changePhoneLessThan30Days = 243 //更换手机时间小于30天
-    case launchgiftovertoday = 244 // 今日已经领过启动红包
-    case launchgiftinvalid = 245 // 启动红包数额无效
-    case banWord                    //含有敏感词汇
+    case unknown = -100
+    case success = 0
+}
+extension Int{
+    func convertToReturnCode() -> ReturnCode {
+        if let re = ReturnCode.init(rawValue: self){
+            return re
+        }
+        return .unknown
+    }
 }
 
 
