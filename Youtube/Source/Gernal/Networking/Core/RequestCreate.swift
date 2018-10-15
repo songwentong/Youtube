@@ -27,7 +27,7 @@ extension Networking {
         var originalRequest: URLRequest?
         do {
             originalRequest = try URLRequest(url: url, method: method, headers: myHeaders)
-            var encodedURLRequest = try encoding.encode(originalRequest!, with: nil)
+            var encodedURLRequest = try encoding.encode(originalRequest!, with: parameters)
             encodedURLRequest.cachePolicy = cachePolicy
             encodedURLRequest.timeoutInterval = timeoutInterval
             let task = Alamofire.request(encodedURLRequest)

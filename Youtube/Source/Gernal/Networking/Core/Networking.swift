@@ -54,37 +54,6 @@ extension Networking{
         return url!
     }
 }
-extension Networking {
-    @discardableResult
-    func network_request<T: Codable>(
-        _ url: URLConvertible,
-        method: HTTPMethod = .get,
-        parameters: APIParameters? = nil,
-        encoding: ParameterEncoding = URLEncoding.default,
-        headers: HTTPHeaders = HTTPHeaders(),
-        timeoutInterval: TimeInterval = 20,
-        finished: @escaping (T)->Void,
-        failed: @escaping (NetWorkingError)->Void)  -> DataRequest
-    {
-        let myHeaders = defaultHttpHeaders().merging(headers) { (c, n) -> String in
-            return n
-        }
-        var originalRequest: URLRequest?
-        do {
-            originalRequest = try URLRequest(url: url, method: method, headers: myHeaders)
-            var encodedURLRequest = try encoding.encode(originalRequest!, with: parameters)
-            encodedURLRequest.timeoutInterval = timeoutInterval
-            let task = Alamofire.request(encodedURLRequest)
-            task.convertDetailType(result: finished, failed: failed)
-            return task
-        } catch {
-            let task = Alamofire.request(url, method: method, parameters: parameters, encoding: encoding, headers: myHeaders)
-            return task
-        }
-//        task.convertDetailType(result: finished, failed: failed)
-//        return task
-    }
-}
 extension Networking{
     public func upload(
         multipartFormData: @escaping (MultipartFormData) -> Void,
@@ -103,7 +72,7 @@ extension Networking{
 extension Networking{
     //默认header
     func defaultHttpHeaders() -> HTTPHeaders {
-        var headers = HTTPHeaders()
+        let headers = HTTPHeaders()
         return headers
     }
 }

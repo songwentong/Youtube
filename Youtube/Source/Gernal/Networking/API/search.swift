@@ -8,8 +8,10 @@
 
 import Foundation
 extension Networking{
-    func search( key:String, finish:([SearchResult])->Void, failed:(NetWorkingError)->Void) -> Void {
-        
-//        Networking.default.network_request(Networking.default.url(methodName: .search), method: .get, parameters: [:], finished: finish, failed: failed)
+    static func search( key:String, finish:@escaping (SearchResult)->Void, failed:@escaping (NetWorkingError)->Void) -> Void {
+        let parameter = ["part":"snippet","maxResults":"25","q":"surfing","key":youtuBeAPIKey]
+        let task = Networking.default.network_request(Networking.default.url(methodName: .search),parameters:parameter)
+        task.convert(finished: finish, failed: failed)
+        //GET https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key={YOUR_API_KEY}
     }
 }

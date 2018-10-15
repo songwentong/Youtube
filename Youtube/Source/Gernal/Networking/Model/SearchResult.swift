@@ -5,8 +5,19 @@
 //  site:https://github.com/swtlovewtt/WTKit
 //  Thank you for use my json model maker😜
 //
-
-public struct SearchResult: Codable {
+public struct SearchResult:Codable{
+    var kind:String
+    var etag:String
+    var nextPageToken:String
+    var regionCode:String
+    var pageInfo:PageInfo
+    var items:[SearchResultUnit]
+}
+public struct PageInfo:Codable{
+    var totalResults:Int
+    var resultsPerPage:Int
+}
+public struct SearchResultUnit: Codable {
     var etag:String
     var kind:String
     var id:[String: String]
@@ -38,8 +49,8 @@ public struct snippet: Codable {
 }
 public struct thumbnails: Codable {
     var high:high
-    var medium:medium
-    var default_var:default_var
+    var medium:high
+    var default_var:high
     enum CodingKeys: String, CodingKey {
         case high = "high"
         case medium = "medium"
@@ -67,9 +78,9 @@ public struct default_var: Codable {
     }
 }
 public struct high: Codable {
-    var height:Int
+    var height:Int?
     var url:String
-    var width:Int
+    var width:Int?
     enum CodingKeys: String, CodingKey {
         case height = "height"
         case url = "url"
