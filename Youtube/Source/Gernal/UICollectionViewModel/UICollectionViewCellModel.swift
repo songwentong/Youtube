@@ -11,11 +11,14 @@ import CoreGraphics
 protocol UICollectionViewCellModel {//cell
     var reuseId:String{get set}
 }
+protocol UICollectionViewCellSizeModel {
+    var size:CGSize{get set}
+}
 //收取的cell应该实现的协议
 protocol UICollectionViewCellModelAcceptProtocol {//数据
     var cellModel:UICollectionViewCellModel!{get set}
 }
-class DefaultUICollectionViewCellModel: UICollectionViewCellModel {//默认的实现
+open class DefaultUICollectionViewCellModel: UICollectionViewCellModel {//默认的实现
     var reuseId:String = ""
     var size:CGSize = CGSize.zero
 }

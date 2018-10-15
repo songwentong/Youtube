@@ -12,7 +12,7 @@ class MainTabbarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Networking.search(key: "key", finish: { (result) in
+        Networking.search(q: "key", finish: { (result) in
             
         }) { (e) in
             

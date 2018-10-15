@@ -12,9 +12,6 @@ import UIKit
 protocol UICollectionViewModel {
     var sections:[UICollectionViewSectionModel]{get set}
 }
-protocol UICollectionViewCellSizeModel {//大小
-    var size:CGSize{get set}
-}
 class DefaultUICollectionViewModel: NSObject,UICollectionViewModel {
     var sections:[UICollectionViewSectionModel] = []
     func model(for indexPath:IndexPath) -> UICollectionViewCellModel {

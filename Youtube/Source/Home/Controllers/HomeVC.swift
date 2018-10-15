@@ -63,13 +63,33 @@ extension HomeVC{
 }
 extension HomeVC:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return collectionViewModel.sections.count
+        return collectionViewModel.sections[section].items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         let model = collectionViewModel.model(for: indexPath)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: model, for: indexPath)
         return cell
+    }
+}
+//UICollectionViewDelegate
+extension HomeVC:UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        if let model = collectionViewModel.model(for: indexPath) as? HomeTitleModel{
+            Networking.search(q: model.model.title, finish: { (result) in
+                
+            }) { (e) in
+                
+            }
+        }
+    }
+}
+extension HomeVC:UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        if let model = collectionViewModel.model(for: indexPath) as? UICollectionViewCellSizeModel{
+            return model.size
+        }
+        return CGSize(width: 100, height: 40)
     }
 }
 extension HomeVC:UITableViewDelegate{
