@@ -26,10 +26,10 @@ extension Networking{
         return ntw
     }()
     func initHost() -> String {
-        return Domain.testServer.rawValue
+        return Domain.serverURL.rawValue
     }
     func switchHotsURL() -> Void {
-        let test = Domain.testServer.rawValue
+        let test = Domain.serverURL.rawValue
         let release = Domain.releaseServer.rawValue
         if hostURL.elementsEqual(test) {
             hostURL = release
