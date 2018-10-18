@@ -23,7 +23,7 @@ extension CategoryModel{
         return list
     }
 }
-class HomeTitleCollectionCellModel:NSObject, UICollectionViewCellModel,UICollectionViewCellSizeModel {
+class HomeTitleCollectionCellModel:NSObject, UICollectionViewCellModel,UICollectionViewCellSizeModel,Codable {
     var size: CGSize = CGSize(width: 100, height: 30)
     var reuseId: String = "HomeTitleCollectionViewCell"
     var model: CategoryModel!

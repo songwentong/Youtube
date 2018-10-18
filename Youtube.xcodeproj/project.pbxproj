@@ -482,9 +482,9 @@
 			isa = PBXGroup;
 			children = (
 				7743E18E20C78046008806A3 /* Main */,
+				7743E18B20C78032008806A3 /* Home */,
 				7742D3BD20CBA37B00102120 /* Preferences */,
 				77965F4420CB6B17006C4E0F /* Gernal */,
-				7743E18B20C78032008806A3 /* Home */,
 				779341AF216C857900854DE1 /* More */,
 			);
 			path = Source;

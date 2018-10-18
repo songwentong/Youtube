@@ -7,13 +7,17 @@
 //  video detail view controller
 
 import UIKit
-
+import youtube_ios_player_helper
 class VideoDetailViewController: UIViewController {
+    @IBOutlet weak var myPlayerView: YTPlayerView!
     var videoUnit:SearchResultUnit!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        myPlayerView.delegate = self
+        if let videoId = videoUnit.id.videoId{
+            myPlayerView.load(withVideoId: videoId)
+        }
+        
     }
     
 
@@ -27,4 +31,9 @@ class VideoDetailViewController: UIViewController {
     }
     */
 
+}
+extension VideoDetailViewController: YTPlayerViewDelegate {
+    func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
+        playerView.playVideo()
+    }
 }
