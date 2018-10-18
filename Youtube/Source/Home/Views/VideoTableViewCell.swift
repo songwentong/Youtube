@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 class VideoTableViewCell: UITableViewCell,UITableViewCellModelAcceptable {
     var cellModel: UITableViewCellModel!{
         didSet{
@@ -16,6 +16,8 @@ class VideoTableViewCell: UITableViewCell,UITableViewCellModelAcceptable {
             }
         }
     }
+    @IBOutlet weak var myImageView: UIImageView!//图片
+    @IBOutlet weak var videotitleLabel: UILabel!//标题
     var detailModel: HomeVideoTableViewCellModel!{
         didSet{
             
@@ -33,6 +35,14 @@ class VideoTableViewCell: UITableViewCell,UITableViewCellModelAcceptable {
     }
     override func layoutSubviews() {
         super.layoutSubviews()
+        videotitleLabel.text = detailModel.model.snippet.title
+        guard let thumbnails = detailModel.model.snippet.thumbnails else {
+            return
+        }
+        guard let url = URL.init(string: thumbnails.default_var.url) else {
+            return
+        }
+        myImageView.kf.setImage(with: url)
     }
     
 }
