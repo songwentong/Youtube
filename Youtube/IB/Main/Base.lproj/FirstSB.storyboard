@@ -86,17 +86,37 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vhc-VL-hJC">
                                 <rect key="frame" x="0.0" y="120" width="375" height="498"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Ep-A0-4L1">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hi3-is-12b">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="498"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableView>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NGu-zT-NMc">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6eL-MM-wXF">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="ItB-4s-EDJ" id="6Hc-n8-1fQ"/>
+                                            <outlet property="delegate" destination="ItB-4s-EDJ" id="Wqu-Jn-lnz"/>
+                                        </connections>
+                                    </collectionView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="3Ep-A0-4L1" firstAttribute="leading" secondItem="Vhc-VL-hJC" secondAttribute="leading" id="O3F-mH-jB0"/>
-                                    <constraint firstAttribute="trailing" secondItem="3Ep-A0-4L1" secondAttribute="trailing" id="QXK-hu-BYt"/>
-                                    <constraint firstItem="3Ep-A0-4L1" firstAttribute="top" secondItem="Vhc-VL-hJC" secondAttribute="top" id="UCh-eW-XmF"/>
-                                    <constraint firstAttribute="bottom" secondItem="3Ep-A0-4L1" secondAttribute="bottom" id="vbR-Wr-DAO"/>
+                                    <constraint firstItem="Hi3-is-12b" firstAttribute="leading" secondItem="Vhc-VL-hJC" secondAttribute="leading" id="EED-jK-DZF"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hi3-is-12b" secondAttribute="bottom" id="Ne8-pC-ZRO"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hi3-is-12b" secondAttribute="trailing" id="UU5-jl-agg"/>
+                                    <constraint firstItem="Hi3-is-12b" firstAttribute="top" secondItem="Vhc-VL-hJC" secondAttribute="top" id="xb5-xa-ep1"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -116,7 +136,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="myTableView" destination="3Ep-A0-4L1" id="y81-5Q-5qK"/>
+                        <outlet property="contentCollectionView" destination="Hi3-is-12b" id="crI-MJ-72K"/>
                         <outlet property="titleCollectionView" destination="Gyq-O3-ZhF" id="se1-t9-awP"/>
                     </connections>
                 </viewController>

@@ -12,7 +12,7 @@ class HomeTitleCollectionViewCell: UICollectionViewCell ,UICollectionViewCellMod
     @IBOutlet weak var titleLabel: UILabel!
     var cellModel: UICollectionViewCellModel!{
         didSet{
-            guard let m = cellModel as? HomeTitleModel else {
+            guard let m = cellModel as? HomeTitleCollectionCellModel else {
                 return
             }
             titleLabel.text = m.model.title

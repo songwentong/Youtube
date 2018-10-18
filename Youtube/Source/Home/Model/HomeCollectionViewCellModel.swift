@@ -23,12 +23,35 @@ extension CategoryModel{
         return list
     }
 }
-class HomeTitleModel:NSObject, UICollectionViewCellModel,UICollectionViewCellSizeModel {
+class HomeTitleCollectionCellModel:NSObject, UICollectionViewCellModel,UICollectionViewCellSizeModel {
     var size: CGSize = CGSize(width: 100, height: 30)
     var reuseId: String = "HomeTitleCollectionViewCell"
     var model: CategoryModel!
     
 }
-class HomeCollectionViewCellModel: NSObject,UICollectionViewCellModel {
+class HomeContentCollectionViewCellModel: NSObject,UICollectionViewCellModel {
     var reuseId: String = "HomeCollectionViewCell"
+    var model: CategoryModel!//titlemModel
+    var searchResult:SearchResult?//搜索结果
+}
+
+//视频单元格
+class HomeVideoTableViewCellModel: UITableViewCellModel {
+    var reuseIdentifier: String = "VideoTableViewCell"
+    var model: SearchResultUnit!//单条搜索结果
+}
+extension SearchResult{
+    //转换为section
+    func convertToContentSection() -> UITableViewSectionModel {
+        let mapedModel = items.map { (unit) -> HomeVideoTableViewCellModel in
+            let model = HomeVideoTableViewCellModel()
+            model.model = unit
+            return model
+        }
+        let section = DefaultTableViewSectionModel()
+        section.rows.append(contentsOf: mapedModel)
+        
+        
+        return section
+    }
 }

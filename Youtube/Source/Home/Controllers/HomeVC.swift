@@ -11,10 +11,10 @@ import UIKit
 class HomeVC: UIViewController {
 
     @IBOutlet weak var titleCollectionView: UICollectionView!//标题
-    @IBOutlet weak var myTableView: UITableView!//列表
-    var collectionViewModel = DefaultUICollectionViewModel()
-    var tableViewModel = DefaultUITableViewModel()
-    var titleList:[CategoryModel] = []
+    @IBOutlet weak var contentCollectionView: UICollectionView!//内容
+    var titleCollectionViewModel = DefaultUICollectionViewModel()//title data
+    var contentCollectionViewModel = HomeContentCollectionViewModel()//content data
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registNibs()
@@ -22,15 +22,28 @@ class HomeVC: UIViewController {
         configTestData()
     }
     func configTestData() -> Void {
+        //title
+        var titleList:[CategoryModel] = []
         titleList = CategoryModel.testModelList()
-        let list = titleList.map { (model) -> HomeTitleModel in
-            let m = HomeTitleModel.init()
+        let list = titleList.map { (model) -> HomeTitleCollectionCellModel in
+            let m = HomeTitleCollectionCellModel.init()
             m.model = model
             return m
         }
-        let section = DefaulUICollectionViewSectionModel.init()
-        section.items.append(contentsOf: list)
-        collectionViewModel.sections.append(section)
+        let titleSection = DefaulUICollectionViewSectionModel.init()
+        titleSection.items.append(contentsOf: list)
+        titleCollectionViewModel.sections.append(titleSection)
+        //content
+        let contentSist = titleSection.items.map { (m1) -> HomeContentCollectionViewCellModel in
+            let m2 = HomeContentCollectionViewCellModel()
+            if let m1 = m1 as? HomeTitleCollectionCellModel{
+                m2.model = m1.model
+            }
+            return m2
+        }
+        let contentSection = DefaulUICollectionViewSectionModel()
+        contentSection.items = contentSist
+        contentCollectionViewModel.sections.append(contentSection)
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,6 +66,7 @@ class HomeVC: UIViewController {
 extension HomeVC{
     func registNibs() -> Void {
         titleCollectionView.register(UINib.init(nibName: "HomeTitleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeTitleCollectionViewCell")
+        contentCollectionView.register(UINib.init(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeCollectionViewCell")
     }
     func requestData() -> Void {
         
@@ -60,49 +74,79 @@ extension HomeVC{
     func updateUI() -> Void {
         
     }
+    func modelforCollectionview( view:UICollectionView) -> DefaultUICollectionViewModel {
+        if view == titleCollectionView{
+            return titleCollectionViewModel
+        }
+        return contentCollectionViewModel
+    }
+    func insertContentList(for title:String, result:SearchResult) -> Void {
+        let contentList = contentCollectionViewModel.sections[0].items
+        guard let firstModel = contentList.first(where: { (firstModel) -> Bool in
+            if let f = firstModel as? HomeContentCollectionViewCellModel{
+                if f.model.title.elementsEqual(title){
+                    return true
+                }
+            }
+            return false
+        }) else{
+            return
+        }
+        guard let convert = firstModel as? HomeContentCollectionViewCellModel else{return}
+        convert.searchResult = result
+        contentCollectionView.reloadData()
+    }
 }
 extension HomeVC:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return collectionViewModel.sections[section].items.count
+        let model = modelforCollectionview(view: collectionView)
+        return model.sections[section].items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        let model = collectionViewModel.model(for: indexPath)
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: model, for: indexPath)
+        let model = modelforCollectionview(view: collectionView)
+        let cellModel = model.model(for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellModel, for: indexPath)
+        if let cellModel = cellModel as? HomeTitleCollectionCellModel{
+            Networking.search(q: cellModel.model.title, finish: { [weak self](result) in
+                self?.insertContentList(for: cellModel.model.title, result: result)
+            }) { (e) in
+                
+            }
+        }
+        
         return cell
     }
 }
 //UICollectionViewDelegate
 extension HomeVC:UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        if let model = collectionViewModel.model(for: indexPath) as? HomeTitleModel{
-            Networking.search(q: model.model.title, finish: { (result) in
-                
-            }) { (e) in
-                
+        if collectionView == titleCollectionView{
+            if let model = titleCollectionViewModel.model(for: indexPath) as? HomeTitleCollectionCellModel{
+                Networking.search(q: model.model.title, finish: { (result) in
+                    
+                }) { (e) in
+                    
+                }
             }
         }
+        
     }
 }
 extension HomeVC:UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-        if let model = collectionViewModel.model(for: indexPath) as? UICollectionViewCellSizeModel{
-            return model.size
+        if collectionView == titleCollectionView{
+            if let model = titleCollectionViewModel.model(for: indexPath) as? UICollectionViewCellSizeModel{
+                return model.size
+            }
         }
+        if collectionView == contentCollectionView{
+            guard let size = collectionView.superview?.bounds.size else{
+                return CGSize.zero
+            }
+            return size
+        }
+        
         return CGSize(width: 100, height: 40)
     }
 }
-extension HomeVC:UITableViewDelegate{
-    
-}
-extension HomeVC:UITableViewDataSource{
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = tableViewModel.model(for: indexPath)
-        return tableView.dequeueReusableCell(withModel: model, for: indexPath)
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return tableViewModel.sections.count
-    }
-}
-

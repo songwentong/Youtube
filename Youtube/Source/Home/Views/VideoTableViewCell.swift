@@ -9,7 +9,18 @@
 import UIKit
 
 class VideoTableViewCell: UITableViewCell,UITableViewCellModelAcceptable {
-    var cellModel: UITableViewCellModel!
+    var cellModel: UITableViewCellModel!{
+        didSet{
+            if let m = cellModel as? HomeVideoTableViewCellModel{
+                detailModel = m
+            }
+        }
+    }
+    var detailModel: HomeVideoTableViewCellModel!{
+        didSet{
+            
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +30,9 @@ class VideoTableViewCell: UITableViewCell,UITableViewCellModelAcceptable {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
     }
     
 }

@@ -4,23 +4,42 @@
 //
 //  Created by 宋文通 on 2018/6/9.
 //  Copyright © 2018年 Wentong Song. All rights reserved.
-//
+//  视频列表
 
 import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell,UICollectionViewCellModelAcceptProtocol {
-    var cellModel: UICollectionViewCellModel!
+    var cellModel: UICollectionViewCellModel!{
+        didSet{
+            if let m = cellModel as? HomeContentCollectionViewCellModel{
+                detailModel = m
+            }
+        }
+    }
+    
     @IBOutlet weak var myTableView: UITableView!
     var tableModel = DefaultUITableViewModel()
+    var detailModel:HomeContentCollectionViewCellModel!{
+        didSet{
+            guard let searchResult = detailModel.searchResult else{return}
+            let section = searchResult.convertToContentSection()
+            tableModel.sections.removeAll()
+            tableModel.sections.append(section)
+            myTableView.reloadData()
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        myTableView.dataSource = self
-        myTableView.delegate = self
+        registNib()
         refreshDataIfNeeded()
     }
 }
 extension HomeCollectionViewCell{
+    func registNib() -> Void {
+        let nib = UINib.init(nibName: "VideoTableViewCell", bundle: nil)
+        myTableView.register(nib, forCellReuseIdentifier: "VideoTableViewCell")
+    }
     func refreshDataIfNeeded() -> Void {
         
     }
@@ -35,10 +54,7 @@ extension HomeCollectionViewCell:UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = tableModel.model(for: indexPath)
-        let cell = tableView.dequeueReusableCell(withIdentifier: model.reuseIdentifier, for: indexPath)
-        if var ac = cell as? UITableViewCellModelAcceptable{
-            ac.cellModel = model
-        }
+        let cell = tableView.dequeueReusableCell(withModel: model, for: indexPath)
         return cell
     }
     

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,24 +22,18 @@
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mbm-9d-kb6">
                         <rect key="frame" x="0.0" y="0.0" width="415" height="399"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="gTV-IL-0wX" id="hrP-Ts-6MW"/>
+                            <outlet property="delegate" destination="gTV-IL-0wX" id="OxH-h8-85k"/>
+                        </connections>
                     </tableView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjY-fa-8uE">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                        <color key="backgroundColor" red="0.1843137255" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="100" id="gFo-sr-qJ1"/>
-                            <constraint firstAttribute="height" constant="100" id="tVO-wj-3S0"/>
-                        </constraints>
-                    </view>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="mbm-9d-kb6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Qb6-J5-vTm"/>
                 <constraint firstAttribute="bottom" secondItem="mbm-9d-kb6" secondAttribute="bottom" id="VuM-Rq-nVq"/>
                 <constraint firstAttribute="trailing" secondItem="mbm-9d-kb6" secondAttribute="trailing" id="dwE-uc-k94"/>
-                <constraint firstItem="tjY-fa-8uE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="g87-LA-mh2"/>
                 <constraint firstItem="mbm-9d-kb6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="iG4-hO-CLE"/>
-                <constraint firstItem="tjY-fa-8uE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vLm-YN-KHa"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="415" height="399"/>
