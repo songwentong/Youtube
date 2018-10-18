@@ -35,6 +35,12 @@ class VideoTableViewCell: UITableViewCell,UITableViewCellModelAcceptable {
 
         // Configure the view for the selected state
     }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        videotitleLabel.text = ""
+        myImageView.kf.cancelDownloadTask()
+        myImageView.image = nil
+    }
     override func layoutSubviews() {
         super.layoutSubviews()
         videotitleLabel.text = detailModel.model.snippet.title
@@ -44,9 +50,7 @@ class VideoTableViewCell: UITableViewCell,UITableViewCellModelAcceptable {
         guard let url = URL.init(string: thumbnails.high.url) else {
             return
         }
-        
         myImageView.kf.setImage(with: url)
-        
         
     }
     

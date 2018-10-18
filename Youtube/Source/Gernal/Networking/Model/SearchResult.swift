@@ -32,6 +32,7 @@ public struct SearchResultUnit: Codable {
 public struct ResultUnitID:Codable{
     var kind:String
     var videoId:String?
+    var playlistId:String?
 }
 public struct snippet: Codable {
     var channelId:String
