@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import youtube_ios_player_helper
 class VideoTableViewCell: UITableViewCell,UITableViewCellModelAcceptable {
     var cellModel: UITableViewCellModel!{
         didSet{
@@ -26,6 +27,7 @@ class VideoTableViewCell: UITableViewCell,UITableViewCellModelAcceptable {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,10 +41,13 @@ class VideoTableViewCell: UITableViewCell,UITableViewCellModelAcceptable {
         guard let thumbnails = detailModel.model.snippet.thumbnails else {
             return
         }
-        guard let url = URL.init(string: thumbnails.default_var.url) else {
+        guard let url = URL.init(string: thumbnails.high.url) else {
             return
         }
+        
         myImageView.kf.setImage(with: url)
+        
+        
     }
     
 }

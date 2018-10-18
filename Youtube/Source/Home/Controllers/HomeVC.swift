@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import youtube_ios_player_helper
 class HomeVC: UIViewController {
 
     @IBOutlet weak var titleCollectionView: UICollectionView!//标题
@@ -122,15 +122,17 @@ extension HomeVC:UICollectionViewDataSource{
 extension HomeVC:UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         if collectionView == titleCollectionView{
-            if let model = titleCollectionViewModel.model(for: indexPath) as? HomeTitleCollectionCellModel{
-                Networking.search(q: model.model.title, finish: { (result) in
-                    
-                }) { (e) in
-                    
-                }
-            }
+            contentCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
         
+    }
+}
+extension HomeVC:UIScrollViewDelegate{
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView){
+        if scrollView == contentCollectionView {
+            let visibleCells = contentCollectionView.visibleCells
+            print("visibleCells count:\(visibleCells.count)")
+        }
     }
 }
 extension HomeVC:UICollectionViewDelegateFlowLayout{
@@ -149,4 +151,8 @@ extension HomeVC:UICollectionViewDelegateFlowLayout{
         
         return CGSize(width: 100, height: 40)
     }
+}
+
+extension UICollectionView{
+    
 }

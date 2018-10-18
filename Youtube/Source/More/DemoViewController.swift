@@ -15,6 +15,10 @@ class DemoViewController: UIViewController {
         super.viewDidLoad()
         demoPlayerView.load(withVideoId: "ygARoqMJyto")
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        demoPlayerView.playVideo()
+    }
     
 
     /*

@@ -7,7 +7,7 @@
 //  视频列表
 
 import UIKit
-
+import youtube_ios_player_helper
 class HomeCollectionViewCell: UICollectionViewCell,UICollectionViewCellModelAcceptProtocol {
     var cellModel: UICollectionViewCellModel!{
         didSet{
@@ -28,11 +28,13 @@ class HomeCollectionViewCell: UICollectionViewCell,UICollectionViewCellModelAcce
             myTableView.reloadData()
         }
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         registNib()
         refreshDataIfNeeded()
+        
     }
 }
 extension HomeCollectionViewCell{
@@ -62,6 +64,10 @@ extension HomeCollectionViewCell:UITableViewDataSource{
 }
 extension HomeCollectionViewCell:UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
-        return 156
+        let width = tableView.bounds.size.width
+        return width * 9 / 16
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        
     }
 }
