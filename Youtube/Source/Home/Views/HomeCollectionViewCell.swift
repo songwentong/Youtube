@@ -8,6 +8,9 @@
 
 import UIKit
 import youtube_ios_player_helper
+protocol HomeCollectionViewCellDelegate:NSObjectProtocol {
+    func shouldShowDetail( cell:HomeCollectionViewCell, unit:SearchResultUnit ) -> Void
+}
 class HomeCollectionViewCell: UICollectionViewCell,UICollectionViewCellModelAcceptProtocol {
     var cellModel: UICollectionViewCellModel!{
         didSet{
@@ -19,6 +22,7 @@ class HomeCollectionViewCell: UICollectionViewCell,UICollectionViewCellModelAcce
     
     @IBOutlet weak var myTableView: UITableView!
     var tableModel = DefaultUITableViewModel()
+    weak var delegate:HomeCollectionViewCellDelegate?
     var detailModel:HomeContentCollectionViewCellModel!{
         didSet{
             guard let searchResult = detailModel.searchResult else{return}
@@ -68,6 +72,7 @@ extension HomeCollectionViewCell:UITableViewDelegate{
         return width * 9 / 16
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        
+        guard let unit = tableModel.model(for: indexPath) as? HomeVideoTableViewCellModel else{return}
+        delegate?.shouldShowDetail(cell: self, unit: unit.model)
     }
 }

@@ -96,6 +96,13 @@ extension HomeVC{
         convert.searchResult = result
         contentCollectionView.reloadData()
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? VideoDetailViewController{
+            if let unit = sender as? SearchResultUnit{
+                dest.videoUnit = unit
+            }
+        }
+    }
 }
 extension HomeVC:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
@@ -113,6 +120,9 @@ extension HomeVC:UICollectionViewDataSource{
             }) { (e) in
                 
             }
+        }
+        if let cell = cell as? HomeCollectionViewCell{
+            cell.delegate = self
         }
         
         return cell
@@ -150,6 +160,11 @@ extension HomeVC:UICollectionViewDelegateFlowLayout{
         }
         
         return CGSize(width: 100, height: 40)
+    }
+}
+extension HomeVC: HomeCollectionViewCellDelegate{
+    func shouldShowDetail( cell:HomeCollectionViewCell, unit:SearchResultUnit ) -> Void{
+        performSegue(withIdentifier: "video", sender: unit)
     }
 }
 

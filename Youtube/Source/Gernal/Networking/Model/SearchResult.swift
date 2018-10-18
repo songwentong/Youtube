@@ -20,7 +20,7 @@ public struct PageInfo:Codable{
 public struct SearchResultUnit: Codable {
     var etag:String
     var kind:String
-    var id:[String: String]
+    var id:ResultUnitID
     var snippet:snippet
     enum CodingKeys: String, CodingKey {
         case etag = "etag"
@@ -28,6 +28,10 @@ public struct SearchResultUnit: Codable {
         case id = "id"
         case snippet = "snippet"
     }
+}
+public struct ResultUnitID:Codable{
+    var kind:String
+    var videoId:String?
 }
 public struct snippet: Codable {
     var channelId:String

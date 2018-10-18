@@ -138,11 +138,20 @@
                     <connections>
                         <outlet property="contentCollectionView" destination="Hi3-is-12b" id="crI-MJ-72K"/>
                         <outlet property="titleCollectionView" destination="Gyq-O3-ZhF" id="se1-t9-awP"/>
+                        <segue destination="qCW-cB-Lha" kind="show" identifier="video" id="AG8-4d-1bh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbg-7q-jug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="68" y="-9.4452773613193415"/>
+        </scene>
+        <!--VideoDetailStoryboard-->
+        <scene sceneID="zYp-v5-iNT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="VideoDetailStoryboard" id="qCW-cB-Lha" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T1w-Vt-150" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="-10"/>
         </scene>
     </scenes>
     <resources>
