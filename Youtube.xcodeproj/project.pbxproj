@@ -31,6 +31,8 @@
 		776F4FF221096239003DB638 /* ServerMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776F4F9E21096238003DB638 /* ServerMethod.swift */; };
 		776F4FF321096239003DB638 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776F4F9F21096238003DB638 /* DataRequest.swift */; };
 		776F4FF421096239003DB638 /* WebURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776F4FA121096239003DB638 /* WebURLs.swift */; };
+		7779D4C8217B0A32008E883C /* playlists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7779D4C7217B0A32008E883C /* playlists.swift */; };
+		7779D4CC217B0C2B008E883C /* PlayListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7779D4CB217B0C2B008E883C /* PlayListResult.swift */; };
 		779341AD216C853500854DE1 /* TestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779341AC216C853500854DE1 /* TestStoryboard.storyboard */; };
 		779341B1216C859300854DE1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779341B0216C859300854DE1 /* TestViewController.swift */; };
 		779341B3216C85E800854DE1 /* DemoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779341B2216C85E800854DE1 /* DemoStoryboard.storyboard */; };
@@ -125,6 +127,8 @@
 		776F4F9E21096238003DB638 /* ServerMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerMethod.swift; sourceTree = "<group>"; };
 		776F4F9F21096238003DB638 /* DataRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
 		776F4FA121096239003DB638 /* WebURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebURLs.swift; sourceTree = "<group>"; };
+		7779D4C7217B0A32008E883C /* playlists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playlists.swift; sourceTree = "<group>"; };
+		7779D4CB217B0C2B008E883C /* PlayListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListResult.swift; sourceTree = "<group>"; };
 		779341AC216C853500854DE1 /* TestStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestStoryboard.storyboard; sourceTree = "<group>"; };
 		779341B0216C859300854DE1 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		779341B2216C85E800854DE1 /* DemoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DemoStoryboard.storyboard; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 			children = (
 				779341B9216D98A600854DE1 /* searchList.swift */,
 				774049CA217438DD001A9275 /* search.swift */,
+				7779D4C7217B0A32008E883C /* playlists.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				774049D82174950F001A9275 /* SearchResult.swift */,
+				7779D4CB217B0C2B008E883C /* PlayListResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -809,6 +815,7 @@
 				77E2FE5F20CB701800FFF34C /* HomeCollectionViewCellModel.swift in Sources */,
 				77E2FE6A20CB746100FFF34C /* UICollectionViewSectionModel.swift in Sources */,
 				7743E18D20C78042008806A3 /* HomeVC.swift in Sources */,
+				7779D4CC217B0C2B008E883C /* PlayListResult.swift in Sources */,
 				77965F5420CB6B69006C4E0F /* UITableViewCellModel.swift in Sources */,
 				77965F4E20CB6B69006C4E0F /* UITableViewModel.swift in Sources */,
 				77F2BB80217884F6003D508B /* VideoDetailViewController.swift in Sources */,
@@ -816,6 +823,7 @@
 				77E2FE6520CB710900FFF34C /* HomeCollectionViewCell.swift in Sources */,
 				7742D3C320CBA6AB00102120 /* PreferencesCell.swift in Sources */,
 				770BF28920CBC061007B7797 /* HomeTitleCollectionViewCell.swift in Sources */,
+				7779D4C8217B0A32008E883C /* playlists.swift in Sources */,
 				776F4FF421096239003DB638 /* WebURLs.swift in Sources */,
 				77EE703B2085941A0065850D /* YoutubeAPI.swift in Sources */,
 				77E2FE6220CB703F00FFF34C /* UICollectionViewModel.swift in Sources */,

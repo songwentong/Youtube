@@ -17,7 +17,7 @@ enum ServerMethod: String {
     case testGet = "get"
     case testPost = "post"
     case search = "search"
-    case youtube_search_list = "youtube.search.list"
+    case youtube_search_list = "playlists"
     //GET https://www.googleapis.com/youtube/v3/search
 }
 
