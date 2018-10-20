@@ -24,6 +24,7 @@ class VideoTableViewCell: UITableViewCell,UITableViewCellModelAcceptable {
             
         }
     }
+    @IBOutlet weak var cornerLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -35,11 +36,16 @@ class VideoTableViewCell: UITableViewCell,UITableViewCellModelAcceptable {
 
         // Configure the view for the selected state
     }
+    
+    
+}
+extension VideoTableViewCell{
     override func prepareForReuse() {
         super.prepareForReuse()
         videotitleLabel.text = ""
         myImageView.kf.cancelDownloadTask()
         myImageView.image = nil
+        cornerLabel.text = ""
     }
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -51,7 +57,9 @@ class VideoTableViewCell: UITableViewCell,UITableViewCellModelAcceptable {
             return
         }
         myImageView.kf.setImage(with: url)
+        if detailModel.model.id.playlistId != nil {
+            cornerLabel.text = "专题"
+        }
         
     }
-    
 }
