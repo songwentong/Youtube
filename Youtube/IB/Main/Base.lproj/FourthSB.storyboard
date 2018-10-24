@@ -34,14 +34,6 @@
             </objects>
             <point key="canvasLocation" x="2169" y="-349"/>
         </scene>
-        <!--TestStoryboard-->
-        <scene sceneID="N2d-SG-RlF">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TestStoryboard" id="wHh-vH-Fkr" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nhf-mO-wIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2837" y="-349"/>
-        </scene>
         <!--DemoStoryboard-->
         <scene sceneID="j3v-4d-hb2">
             <objects>
