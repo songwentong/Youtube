@@ -24,7 +24,7 @@ protocol UITableViewCellSelection:UITableViewCellModel {
     var clickEvent:(()->Void){get set}//点击回调
 }
 //row 的默认实例
-open class DefaultTableViewCellModel:UITableViewCellModel,UITableViewCellHeightProtocol,UITableViewCellSelection {
+open class DefaultUITableViewCellModel:UITableViewCellModel,UITableViewCellHeightProtocol,UITableViewCellSelection {
     var heightForRow: CGFloat = UITableView.automaticDimension//行高
     var reuseIdentifier: String = ""//重用ID
     var clickEvent:(()->Void) = {}//点击事件

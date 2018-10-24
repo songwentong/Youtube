@@ -10,20 +10,73 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Test View Controller-->
         <scene sceneID="oSk-U7-pOC">
             <objects>
-                <viewController id="UA5-e8-hS8" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="UA5-e8-hS8" customClass="TestViewController" customModule="Youtube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GN8-l3-o5F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cah-7a-0bn">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="58" id="SEV-po-iST" customClass="TestCellTableViewCell" customModule="Youtube" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="58"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SEV-po-iST" id="L6N-V0-K1b">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3Q-yc-hIH">
+                                                    <rect key="frame" x="10" y="18.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="r3Q-yc-hIH" firstAttribute="leading" secondItem="L6N-V0-K1b" secondAttribute="leading" constant="10" id="Nkv-GF-IQ6"/>
+                                                <constraint firstItem="r3Q-yc-hIH" firstAttribute="centerY" secondItem="L6N-V0-K1b" secondAttribute="centerY" id="suu-dw-FAJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="testLabel" destination="r3Q-yc-hIH" id="ShQ-wT-hbd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="UA5-e8-hS8" id="SfA-qY-4qp"/>
+                                    <outlet property="delegate" destination="UA5-e8-hS8" id="u5q-pK-QWh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="km2-IO-ZMW" firstAttribute="bottom" secondItem="cah-7a-0bn" secondAttribute="bottom" id="MOD-mB-93O"/>
+                            <constraint firstItem="km2-IO-ZMW" firstAttribute="trailing" secondItem="cah-7a-0bn" secondAttribute="trailing" id="Uw8-ne-oQF"/>
+                            <constraint firstItem="cah-7a-0bn" firstAttribute="leading" secondItem="km2-IO-ZMW" secondAttribute="leading" id="ZEP-eI-h3s"/>
+                            <constraint firstItem="cah-7a-0bn" firstAttribute="top" secondItem="km2-IO-ZMW" secondAttribute="top" id="l0e-nC-vzl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="km2-IO-ZMW"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <segue destination="zpu-3p-CMM" kind="show" identifier="log" id="SGf-vf-XYH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8S0-m5-393" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-345" y="137"/>
+            <point key="canvasLocation" x="-346.39999999999998" y="136.28185907046478"/>
+        </scene>
+        <!--LogStoryboard-->
+        <scene sceneID="DRn-mD-hUh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LogStoryboard" id="zpu-3p-CMM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cu4-XU-g3T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="255" y="125"/>
         </scene>
     </scenes>
 </document>

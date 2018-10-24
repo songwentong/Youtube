@@ -48,7 +48,7 @@ extension SearchResult{
             model.model = unit
             return model
         }
-        let section = DefaultTableViewSectionModel()
+        let section = DefaultUITableViewSectionModel()
         section.rows.append(contentsOf: mapedModel)
         
         

@@ -23,6 +23,9 @@ extension DataRequest{
                 return
             }
             do{
+                if let string = String.init(data: data, encoding: .utf8){
+                    LogViewController.log = LogViewController.log + "response:\(response)接口数据:\(string)"
+                }
                 let result = try JSONDecoder().decode(T.self, from: data)//类型转换
                 finished(result)
             }catch{

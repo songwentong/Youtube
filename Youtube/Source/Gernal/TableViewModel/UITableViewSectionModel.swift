@@ -12,7 +12,7 @@ protocol UITableViewSectionModel {
     var rows:[UITableViewCellModel]{get set}
 }
 //section 的默认实例
-class DefaultTableViewSectionModel:UITableViewSectionModel {
+class DefaultUITableViewSectionModel:UITableViewSectionModel {
     var rows:[UITableViewCellModel] = []//行
     func append( row:UITableViewCellModel) -> Void {
         rows.append(row)

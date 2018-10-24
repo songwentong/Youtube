@@ -44,6 +44,10 @@
 		77965F5220CB6B69006C4E0F /* SeparateLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77965F4B20CB6B69006C4E0F /* SeparateLineTableViewCell.swift */; };
 		77965F5320CB6B69006C4E0F /* UITableViewSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77965F4C20CB6B69006C4E0F /* UITableViewSectionModel.swift */; };
 		77965F5420CB6B69006C4E0F /* UITableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77965F4D20CB6B69006C4E0F /* UITableViewCellModel.swift */; };
+		77A2660521807240003D20BF /* TestCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A2660421807240003D20BF /* TestCellModel.swift */; };
+		77A266072180728B003D20BF /* TestCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A266062180728B003D20BF /* TestCellTableViewCell.swift */; };
+		77A26609218073C7003D20BF /* LogStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A26608218073C7003D20BF /* LogStoryboard.storyboard */; };
+		77A2660B218073D6003D20BF /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A2660A218073D6003D20BF /* LogViewController.swift */; };
 		77E2FE4920CB6DA900FFF34C /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2FE4720CB6DA900FFF34C /* VideoTableViewCell.swift */; };
 		77E2FE4A20CB6DA900FFF34C /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77E2FE4820CB6DA900FFF34C /* VideoTableViewCell.xib */; };
 		77E2FE5720CB6E6900FFF34C /* print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2FE5620CB6E6900FFF34C /* print.swift */; };
@@ -139,6 +143,10 @@
 		77965F4B20CB6B69006C4E0F /* SeparateLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparateLineTableViewCell.swift; sourceTree = "<group>"; };
 		77965F4C20CB6B69006C4E0F /* UITableViewSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewSectionModel.swift; sourceTree = "<group>"; };
 		77965F4D20CB6B69006C4E0F /* UITableViewCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellModel.swift; sourceTree = "<group>"; };
+		77A2660421807240003D20BF /* TestCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCellModel.swift; sourceTree = "<group>"; };
+		77A266062180728B003D20BF /* TestCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCellTableViewCell.swift; sourceTree = "<group>"; };
+		77A26608218073C7003D20BF /* LogStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogStoryboard.storyboard; sourceTree = "<group>"; };
+		77A2660A218073D6003D20BF /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		77E2FE4720CB6DA900FFF34C /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		77E2FE4820CB6DA900FFF34C /* VideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
 		77E2FE5620CB6E6900FFF34C /* print.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = print.swift; sourceTree = "<group>"; };
@@ -301,6 +309,7 @@
 			children = (
 				779341AC216C853500854DE1 /* TestStoryboard.storyboard */,
 				779341B2216C85E800854DE1 /* DemoStoryboard.storyboard */,
+				77A26608218073C7003D20BF /* LogStoryboard.storyboard */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -308,8 +317,11 @@
 		779341AF216C857900854DE1 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				77A2660321807228003D20BF /* Model */,
+				77A2660221807223003D20BF /* VIews */,
 				779341B0216C859300854DE1 /* TestViewController.swift */,
 				779341B4216C85F800854DE1 /* DemoViewController.swift */,
+				77A2660A218073D6003D20BF /* LogViewController.swift */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -354,6 +366,22 @@
 				77965F4C20CB6B69006C4E0F /* UITableViewSectionModel.swift */,
 			);
 			path = TableViewModel;
+			sourceTree = "<group>";
+		};
+		77A2660221807223003D20BF /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				77A266062180728B003D20BF /* TestCellTableViewCell.swift */,
+			);
+			path = VIews;
+			sourceTree = "<group>";
+		};
+		77A2660321807228003D20BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77A2660421807240003D20BF /* TestCellModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		77E2FE4620CB6D8500FFF34C /* Views */ = {
@@ -662,6 +690,7 @@
 				77965F5120CB6B69006C4E0F /* SeparateLineTableViewCell.xib in Resources */,
 				779341AD216C853500854DE1 /* TestStoryboard.storyboard in Resources */,
 				7743E1A120C781C5008806A3 /* ThirdSB.storyboard in Resources */,
+				77A26609218073C7003D20BF /* LogStoryboard.storyboard in Resources */,
 				77E2FE4A20CB6DA900FFF34C /* VideoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -796,9 +825,11 @@
 				774049CB217438DD001A9275 /* search.swift in Sources */,
 				776F4FF021096239003DB638 /* ServerReturnCode.swift in Sources */,
 				77F2BB7921782DC9003D508B /* HomeTitleCollectionViewModel.swift in Sources */,
+				77A2660B218073D6003D20BF /* LogViewController.swift in Sources */,
 				774049D92174950F001A9275 /* SearchResult.swift in Sources */,
 				776F4FF321096239003DB638 /* DataRequest.swift in Sources */,
 				774049D721748FF9001A9275 /* MainTabbarController.swift in Sources */,
+				77A2660521807240003D20BF /* TestCellModel.swift in Sources */,
 				776F4FEE21096239003DB638 /* H5URLs.swift in Sources */,
 				7742D3BF20CBA38A00102120 /* PreferencesVC.swift in Sources */,
 				77965F5320CB6B69006C4E0F /* UITableViewSectionModel.swift in Sources */,
@@ -824,6 +855,7 @@
 				77EE703B2085941A0065850D /* YoutubeAPI.swift in Sources */,
 				77E2FE6220CB703F00FFF34C /* UICollectionViewModel.swift in Sources */,
 				776F4FF121096239003DB638 /* Networking.swift in Sources */,
+				77A266072180728B003D20BF /* TestCellTableViewCell.swift in Sources */,
 				77E2FE5A20CB6E8E00FFF34C /* Dictionary.swift in Sources */,
 				77F2BB7B21782DFB003D508B /* HomeContentCollectionViewModel.swift in Sources */,
 				77E2FE6820CB713900FFF34C /* UICollectionViewCellModel.swift in Sources */,
