@@ -10,10 +10,14 @@ import UIKit
 import youtube_ios_player_helper
 class VideoDetailViewController: UIViewController {
     @IBOutlet weak var myPlayerView: YTPlayerView!
-    var videoUnit:SearchResultUnit!
+    var videoUnit:SearchResultUnit?{
+        didSet{
+            
+        }
+    }
     var playList:PlayListItemResult?{
         didSet{
-            playListIfNeeded()
+//            playListIfNeeded()
         }
     }
     override func viewDidLoad() {
@@ -21,28 +25,29 @@ class VideoDetailViewController: UIViewController {
         myPlayerView.delegate = self
         
         //video
-        if let videoId = videoUnit.id.videoId{
+        if let videoId = videoUnit?.id.videoId{
             play(withVideoId: videoId)
         }
+        /*
         guard let playlistId = videoUnit.id.playlistId else{return}
         Networking.playlistItem(playlistId: playlistId, finish: { [weak self](result) in
             self?.playList = result
         }) { (e) in
             print("\(e)")
-        }
+        }*/
     }
     func play(withVideoId videoId:String) -> Void {
         myPlayerView.load(withVideoId: videoId)
     }
-    func playListIfNeeded() -> Void {
-        if videoUnit.id.videoId != nil{
-            return
-        }
-        guard let list = playList else {return}
-        guard let first = list.items.first else{return}
-        play(withVideoId: first.contentDetails.videoId)
-    }
-    
+//    func playListIfNeeded() -> Void {
+//        if videoUnit.id.videoId != nil{
+//            return
+//        }
+//        guard let list = playList else {return}
+//        guard let first = list.items.first else{return}
+//        play(withVideoId: first.contentDetails.videoId)
+//    }
+//
 
     /*
     // MARK: - Navigation

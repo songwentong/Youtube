@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YhP-Si-8qf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YhP-Si-8qf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -130,6 +130,7 @@
                         <outlet property="contentCollectionView" destination="Hi3-is-12b" id="crI-MJ-72K"/>
                         <outlet property="titleCollectionView" destination="Gyq-O3-ZhF" id="se1-t9-awP"/>
                         <segue destination="qCW-cB-Lha" kind="show" identifier="video" id="AG8-4d-1bh"/>
+                        <segue destination="GSl-A5-yCh" kind="show" identifier="playlist" id="GBB-Ov-vds"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbg-7q-jug" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -143,6 +144,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T1w-Vt-150" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="854" y="-10"/>
+        </scene>
+        <!--PlayListStoryboard-->
+        <scene sceneID="Mo9-NM-iDh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlayListStoryboard" id="GSl-A5-yCh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HPm-80-prq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="784" y="68"/>
         </scene>
     </scenes>
     <resources>

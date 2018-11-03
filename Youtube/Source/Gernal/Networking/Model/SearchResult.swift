@@ -34,6 +34,13 @@ public class ResultUnitID:Codable{
     var kind:String
     var videoId:String?
     var playlistId:String?
+    func isPlayList() -> Bool {
+        if playlistId == nil {
+            return false
+        }else{
+            return true
+        }
+    }
 }
 public class Snippet: Codable {//片段
     var channelId:String

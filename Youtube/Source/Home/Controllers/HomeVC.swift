@@ -102,6 +102,11 @@ extension HomeVC{
                 dest.videoUnit = unit
             }
         }
+        if let vc = segue.destination as? PlayListViewController{
+            if let unit = sender as? SearchResultUnit{
+                vc.videoUnit = unit
+            }
+        }
     }
 }
 extension HomeVC:UICollectionViewDataSource{
@@ -164,7 +169,12 @@ extension HomeVC:UICollectionViewDelegateFlowLayout{
 }
 extension HomeVC: HomeCollectionViewCellDelegate{
     func shouldShowDetail( cell:HomeCollectionViewCell, unit:SearchResultUnit ) -> Void{
-        performSegue(withIdentifier: "video", sender: unit)
+        if unit.id.isPlayList(){
+            performSegue(withIdentifier: "playlist", sender: unit)
+        }else{
+            performSegue(withIdentifier: "video", sender: unit)
+        }
+        
     }
 }
 
