@@ -24,7 +24,8 @@ class VideoDetailViewController: UIViewController {
         if let videoId = videoUnit.id.videoId{
             play(withVideoId: videoId)
         }
-        Networking.playlists(channelId: videoUnit.snippet.channelId, finish: { [weak self](result) in
+        guard let playlistId = videoUnit.id.playlistId else{return}
+        Networking.playlistItem(playlistId: playlistId, finish: { [weak self](result) in
             self?.playList = result
         }) { (e) in
             print("\(e)")

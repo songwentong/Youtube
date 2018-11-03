@@ -20,9 +20,9 @@ extension Networking{
         let parameter = ["part":"snippet","maxResults":"25","q":q,"key":youtuBeAPIKey]
         let task = Networking.default.network_request(Networking.default.url(methodName: .search),parameters:parameter)
         task.convert(finished: finish, failed: failed)
-        URLSession.shared.dataTask(with: URL.init(fileURLWithPath: "")) { (data, response, error) in
-            
-        }
+//        URLSession.shared.dataTask(with: URL.init(fileURLWithPath: "")) { (data, response, error) in
+//            
+//        }
         //GET https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key={YOUR_API_KEY}
     }
 }
