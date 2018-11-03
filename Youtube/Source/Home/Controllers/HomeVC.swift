@@ -99,7 +99,7 @@ extension HomeVC{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? VideoDetailViewController{
             if let unit = sender as? SearchResultUnit{
-                dest.videoUnit = unit
+                dest.videoId = unit.id.videoId ?? ""
             }
         }
         if let vc = segue.destination as? PlayListViewController{

@@ -13,7 +13,7 @@
         <!--Play List View Controller-->
         <scene sceneID="Rpd-mi-H8b">
             <objects>
-                <viewController id="4f0-So-Ga4" customClass="PlayListViewController" customModule="Youtube" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="4f0-So-Ga4" customClass="PlayListViewController" customModule="Youtube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uor-d9-WzA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,10 +47,22 @@
                         <viewLayoutGuide key="safeArea" id="bng-2R-4fY"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="playListTableView" destination="nKy-Y4-DeD" id="ipq-F9-ZkY"/>
+                        <segue destination="jDy-t3-wgC" kind="show" identifier="playVideo" id="pZ2-X1-YV5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xPD-Gx-Rtm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="212" y="-224"/>
+        </scene>
+        <!--VideoDetailStoryboard-->
+        <scene sceneID="3eD-UH-COc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="VideoDetailStoryboard" id="jDy-t3-wgC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tHZ-aJ-vSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757" y="-242"/>
         </scene>
     </scenes>
 </document>

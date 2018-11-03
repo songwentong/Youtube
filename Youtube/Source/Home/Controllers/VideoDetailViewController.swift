@@ -10,24 +10,14 @@ import UIKit
 import youtube_ios_player_helper
 class VideoDetailViewController: UIViewController {
     @IBOutlet weak var myPlayerView: YTPlayerView!
-    var videoUnit:SearchResultUnit?{
-        didSet{
-            
-        }
-    }
-    var playList:PlayListItemResult?{
-        didSet{
-//            playListIfNeeded()
-        }
-    }
+    
+    var videoId:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         myPlayerView.delegate = self
         
         //video
-        if let videoId = videoUnit?.id.videoId{
-            play(withVideoId: videoId)
-        }
+        play(withVideoId: videoId)
         /*
         guard let playlistId = videoUnit.id.playlistId else{return}
         Networking.playlistItem(playlistId: playlistId, finish: { [weak self](result) in

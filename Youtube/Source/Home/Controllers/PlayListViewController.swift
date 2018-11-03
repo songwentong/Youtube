@@ -19,7 +19,11 @@ class PlayListViewController: UIViewController {
             }
         }
     }
-    var items:[PlayListItemResultUnit] = []
+    var items:[PlayListItemResultUnit] = []{
+        didSet{
+            playListTableView.reloadData()
+        }
+    }
     var playList:PlayListItemResult?{
         didSet{
             if let playList = playList{
@@ -27,6 +31,7 @@ class PlayListViewController: UIViewController {
             }
         }
     }
+    @IBOutlet weak var playListTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,7 +39,13 @@ class PlayListViewController: UIViewController {
         
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? VideoDetailViewController{
+            if let obj = sender as? PlayListItemResultUnit{
+                vc.videoId = obj.contentDetails.videoId
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -60,5 +71,8 @@ extension PlayListViewController:UITableViewDataSource{
     
 }
 extension PlayListViewController:UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        let item = items[indexPath.row]
+        performSegue(withIdentifier: "playVideo", sender: item)
+    }
 }
