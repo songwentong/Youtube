@@ -11,7 +11,7 @@ import youtube_ios_player_helper
 class VideoDetailViewController: UIViewController {
     @IBOutlet weak var myPlayerView: YTPlayerView!
     var videoUnit:SearchResultUnit!
-    var playList:PlayListResult?{
+    var playList:PlayListItemResult?{
         didSet{
             playListIfNeeded()
         }
@@ -40,7 +40,7 @@ class VideoDetailViewController: UIViewController {
         }
         guard let list = playList else {return}
         guard let first = list.items.first else{return}
-        play(withVideoId: first.id)
+        play(withVideoId: first.contentDetails.videoId)
     }
     
 

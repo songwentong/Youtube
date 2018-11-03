@@ -16,7 +16,7 @@ public class PlayListItemResult: NSObject,Codable{
 public class PlayListItemResultUnit: NSObject,Codable {
     var kind:String
     var etag:String
-    var id:ResultUnitID
+    var id:String
     var snippet:Snippet
     var contentDetails:ContentDetails
 }

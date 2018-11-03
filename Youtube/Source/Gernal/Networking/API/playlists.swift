@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 extension Networking{
     @discardableResult
-    static func playlistItem( playlistId:String, finish:@escaping (PlayListResult)->Void, failed:@escaping (NetWorkingError)->Void) -> DataRequest {
+    static func playlistItem( playlistId:String, finish:@escaping (PlayListItemResult)->Void, failed:@escaping (NetWorkingError)->Void) -> DataRequest {
         let parameter = ["part":"snippet,contentDetails","maxResults":"25","playlistId":playlistId,"key":youtuBeAPIKey]
         let task = Networking.default.network_request(Networking.default.url(methodName: .youtube_search_list),parameters:parameter)
         task.convert(finished: finish, failed: failed)
