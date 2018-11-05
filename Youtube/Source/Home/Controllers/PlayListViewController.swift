@@ -11,6 +11,7 @@ import UIKit
 class PlayListViewController: UIViewController {
     var videoUnit:SearchResultUnit?{
         didSet{
+//            newsPrint("\(Date().timeIntervalSince1970)")
             guard let playlistId = videoUnit?.id.playlistId else{return}
             Networking.playlistItem(playlistId: playlistId, finish: { [weak self](result) in
                 self?.playList = result
@@ -34,7 +35,7 @@ class PlayListViewController: UIViewController {
     @IBOutlet weak var playListTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        newsPrint("\(Date().timeIntervalSince1970)")
         // Do any additional setup after loading the view.
         
     }
