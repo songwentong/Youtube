@@ -342,7 +342,6 @@
 			isa = PBXGroup;
 			children = (
 				7743E18C20C78042008806A3 /* HomeVC.swift */,
-				77F2BB7F217884F6003D508B /* VideoDetailViewController.swift */,
 				774A9B57218D9FC3008623CB /* PlayListViewController.swift */,
 			);
 			path = Controllers;
@@ -351,6 +350,7 @@
 		77965F4420CB6B17006C4E0F /* Gernal */ = {
 			isa = PBXGroup;
 			children = (
+				77A73B7E219A7C2100838611 /* 播放视频 */,
 				77E2FE6020CB702200FFF34C /* UICollectionViewModel */,
 				77E2FE5820CB6E8300FFF34C /* Others */,
 				77E2FE5520CB6E4800FFF34C /* print */,
@@ -389,11 +389,35 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		77E2FE4620CB6D8500FFF34C /* Views */ = {
+		77A73B7E219A7C2100838611 /* 播放视频 */ = {
+			isa = PBXGroup;
+			children = (
+				77A73B80219A7C4F00838611 /* Controller */,
+				77A73B7F219A7C4C00838611 /* View */,
+			);
+			path = "播放视频";
+			sourceTree = "<group>";
+		};
+		77A73B7F219A7C4C00838611 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				77E2FE4720CB6DA900FFF34C /* VideoTableViewCell.swift */,
 				77E2FE4820CB6DA900FFF34C /* VideoTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77A73B80219A7C4F00838611 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				77F2BB7F217884F6003D508B /* VideoDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		77E2FE4620CB6D8500FFF34C /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				77E2FE6320CB710900FFF34C /* HomeCollectionViewCell.swift */,
 				77E2FE6420CB710900FFF34C /* HomeCollectionViewCell.xib */,
 				770BF28720CBC061007B7797 /* HomeTitleCollectionViewCell.swift */,
