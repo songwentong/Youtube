@@ -29,15 +29,13 @@ class VideoDetailViewController: UIViewController {
     func play(withVideoId videoId:String) -> Void {
         myPlayerView.load(withVideoId: videoId)
     }
-//    func playListIfNeeded() -> Void {
-//        if videoUnit.id.videoId != nil{
-//            return
-//        }
-//        guard let list = playList else {return}
-//        guard let first = list.items.first else{return}
-//        play(withVideoId: first.contentDetails.videoId)
-//    }
-//
+    
+    
+    @IBAction func backPressed(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
 
     /*
     // MARK: - Navigation
@@ -53,5 +51,8 @@ class VideoDetailViewController: UIViewController {
 extension VideoDetailViewController: YTPlayerViewDelegate {
     func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
         playerView.playVideo()
+    }
+    func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
+        print("didChangeTo state")
     }
 }
