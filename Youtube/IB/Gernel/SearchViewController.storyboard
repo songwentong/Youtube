@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zsi-wc-6pt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="GrM-zB-Jo1">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="zsi-wc-6pt" customClass="SearchViewController" customModule="Youtube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SDl-3Q-kpW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Riq-h3-Ep1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vD-tB-rde">
+                                        <rect key="frame" x="8" y="7" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="rcZ-Z8-tfT"/>
+                                            <constraint firstAttribute="height" constant="30" id="vaW-dm-IZ0"/>
+                                        </constraints>
+                                        <state key="normal" title="返回"/>
+                                        <connections>
+                                            <action selector="backPressed:" destination="zsi-wc-6pt" eventType="touchUpInside" id="vOM-lv-Cl7"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pQA-Sc-Pk5">
+                                        <rect key="frame" x="64" y="7" width="247" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ti-kq-ztB">
+                                        <rect key="frame" x="321" y="7" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="MmV-51-eMb"/>
+                                            <constraint firstAttribute="width" constant="46" id="Xb0-Gj-ScF"/>
+                                        </constraints>
+                                        <state key="normal" title="搜索"/>
+                                        <connections>
+                                            <action selector="searchPressed:" destination="zsi-wc-6pt" eventType="touchUpInside" id="jNZ-t8-O76"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81176470588235294" green="0.13333333333333333" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="403-nv-lm6"/>
+                                    <constraint firstItem="4Ti-kq-ztB" firstAttribute="centerY" secondItem="Riq-h3-Ep1" secondAttribute="centerY" id="6j5-7A-cJs"/>
+                                    <constraint firstItem="5vD-tB-rde" firstAttribute="leading" secondItem="Riq-h3-Ep1" secondAttribute="leading" constant="8" id="8dT-AV-lhC"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Ti-kq-ztB" secondAttribute="trailing" constant="8" id="A4S-cY-oPH"/>
+                                    <constraint firstItem="pQA-Sc-Pk5" firstAttribute="top" secondItem="Riq-h3-Ep1" secondAttribute="top" constant="7" id="Dns-Ac-da1"/>
+                                    <constraint firstItem="pQA-Sc-Pk5" firstAttribute="leading" secondItem="5vD-tB-rde" secondAttribute="trailing" constant="10" id="O21-Hw-4zm"/>
+                                    <constraint firstItem="pQA-Sc-Pk5" firstAttribute="centerY" secondItem="Riq-h3-Ep1" secondAttribute="centerY" id="ZOI-nQ-UM4"/>
+                                    <constraint firstItem="pQA-Sc-Pk5" firstAttribute="centerX" secondItem="Riq-h3-Ep1" secondAttribute="centerX" id="cIg-dR-WtK"/>
+                                    <constraint firstItem="5vD-tB-rde" firstAttribute="centerY" secondItem="Riq-h3-Ep1" secondAttribute="centerY" id="dux-Ck-BOS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Riq-h3-Ep1" firstAttribute="top" secondItem="Xea-lI-U5n" secondAttribute="top" id="QvQ-4p-hKr"/>
+                            <constraint firstItem="Riq-h3-Ep1" firstAttribute="leading" secondItem="Xea-lI-U5n" secondAttribute="leading" id="RpN-c0-aw9"/>
+                            <constraint firstItem="Riq-h3-Ep1" firstAttribute="trailing" secondItem="Xea-lI-U5n" secondAttribute="trailing" id="Yxf-aR-m7Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xea-lI-U5n"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchTextField" destination="pQA-Sc-Pk5" id="lVs-kT-dRi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LsQ-in-tKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-180" y="156.97151424287858"/>
+        </scene>
+    </scenes>
+</document>
