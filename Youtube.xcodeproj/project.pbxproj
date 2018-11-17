@@ -311,6 +311,7 @@
 		779341AB216C852100854DE1 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				7742D3B820CBA35100102120 /* PreferencesSB.storyboard */,
 				779341AC216C853500854DE1 /* TestStoryboard.storyboard */,
 				779341B2216C85E800854DE1 /* DemoStoryboard.storyboard */,
 				77A26608218073C7003D20BF /* LogStoryboard.storyboard */,
@@ -415,6 +416,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		77BB1924219FAA6200FA9868 /* Gernel */ = {
+			isa = PBXGroup;
+			children = (
+				77F2BB7D217884D1003D508B /* VideoDetailStoryboard.storyboard */,
+				774A9B59218D9FD9008623CB /* PlayListStoryboard.storyboard */,
+			);
+			path = Gernel;
+			sourceTree = "<group>";
+		};
 		77E2FE4620CB6D8500FFF34C /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -476,7 +486,6 @@
 		77E2FE6B20CB77A400FFF34C /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				7743E19520C781AC008806A3 /* FirstSB.storyboard */,
 				7743E19C20C781B9008806A3 /* SecondSB.storyboard */,
 				7743E1A320C781C5008806A3 /* ThirdSB.storyboard */,
 				7743E1AA20C781CD008806A3 /* FourthSB.storyboard */,
@@ -556,7 +565,7 @@
 				77E2FE6B20CB77A400FFF34C /* Main */,
 				77F2BB7C217884C1003D508B /* Home */,
 				779341AB216C852100854DE1 /* More */,
-				7742D3B820CBA35100102120 /* PreferencesSB.storyboard */,
+				77BB1924219FAA6200FA9868 /* Gernel */,
 			);
 			path = IB;
 			sourceTree = "<group>";
@@ -572,8 +581,7 @@
 		77F2BB7C217884C1003D508B /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				77F2BB7D217884D1003D508B /* VideoDetailStoryboard.storyboard */,
-				774A9B59218D9FD9008623CB /* PlayListStoryboard.storyboard */,
+				7743E19520C781AC008806A3 /* FirstSB.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
