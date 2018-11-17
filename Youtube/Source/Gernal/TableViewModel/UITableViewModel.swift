@@ -12,7 +12,7 @@ protocol UITableViewModel {
     var sections:[UITableViewSectionModel]{get set}
 }
 class DefaultUITableViewModel: UITableViewModel {
-    var sections:[UITableViewSectionModel] = []
+    var sections:[UITableViewSectionModel] = [DefaultUITableViewSectionModel()]
     func append( section:UITableViewSectionModel) -> Void {
         sections.append(section)
     }

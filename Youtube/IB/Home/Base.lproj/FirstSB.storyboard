@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YhP-Si-8qf">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,7 +17,7 @@
                     <tabBarItem key="tabBarItem" title="HOME" image="FirstIcon" id="krR-gM-bId"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d7j-gD-ZnD">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -33,26 +33,20 @@
             <objects>
                 <viewController id="ItB-4s-EDJ" customClass="HomeVC" customModule="Youtube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9KM-Tw-48M">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLb-H9-LP0">
-                                <rect key="frame" x="0.0" y="20" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niu Tube" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnf-gb-Tmb">
-                                        <rect key="frame" x="8" y="8" width="88" height="27.5"/>
+                                        <rect key="frame" x="8" y="12.000000000000002" width="88" height="27.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入关键字" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W4Y-jW-OM4">
-                                        <rect key="frame" x="116" y="7" width="239" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gyq-O3-ZhF">
-                                        <rect key="frame" x="0.0" y="60" width="375" height="40"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gyq-O3-ZhF">
+                                        <rect key="frame" x="0.0" y="60" width="414" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="1FI-8b-hay"/>
@@ -69,25 +63,36 @@
                                             <outlet property="delegate" destination="ItB-4s-EDJ" id="EJI-HF-cOv"/>
                                         </connections>
                                     </collectionView>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JmL-ta-fwJ">
+                                        <rect key="frame" x="360" y="11" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="RqQ-qh-8Md"/>
+                                            <constraint firstAttribute="width" constant="46" id="YMV-ko-AKV"/>
+                                        </constraints>
+                                        <state key="normal" image="search"/>
+                                        <connections>
+                                            <segue destination="dkA-12-ybT" kind="show" id="2Y9-It-FwT"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.81176470588235294" green="0.13333333333333333" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="1Hk-Y3-NhZ"/>
                                     <constraint firstItem="Gyq-O3-ZhF" firstAttribute="leading" secondItem="PLb-H9-LP0" secondAttribute="leading" id="2uk-A4-Ya7"/>
-                                    <constraint firstAttribute="trailing" secondItem="W4Y-jW-OM4" secondAttribute="trailing" constant="20" id="7Zt-gd-kr1"/>
                                     <constraint firstAttribute="bottom" secondItem="Gyq-O3-ZhF" secondAttribute="bottom" id="GTO-W5-n70"/>
+                                    <constraint firstItem="JmL-ta-fwJ" firstAttribute="centerY" secondItem="mnf-gb-Tmb" secondAttribute="centerY" id="LtD-05-eCE"/>
                                     <constraint firstAttribute="trailing" secondItem="Gyq-O3-ZhF" secondAttribute="trailing" id="QH2-6v-zix"/>
-                                    <constraint firstItem="mnf-gb-Tmb" firstAttribute="top" secondItem="PLb-H9-LP0" secondAttribute="top" constant="8" id="VmB-p0-yrd"/>
-                                    <constraint firstItem="W4Y-jW-OM4" firstAttribute="centerY" secondItem="mnf-gb-Tmb" secondAttribute="centerY" id="Vo3-M9-noU"/>
-                                    <constraint firstItem="W4Y-jW-OM4" firstAttribute="leading" secondItem="mnf-gb-Tmb" secondAttribute="trailing" constant="20" id="dqT-jd-esG"/>
+                                    <constraint firstItem="mnf-gb-Tmb" firstAttribute="top" secondItem="PLb-H9-LP0" secondAttribute="top" constant="12" id="VmB-p0-yrd"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mnf-gb-Tmb" secondAttribute="trailing" constant="20" symbolic="YES" id="XuR-Kx-3Ln"/>
                                     <constraint firstItem="mnf-gb-Tmb" firstAttribute="leading" secondItem="PLb-H9-LP0" secondAttribute="leading" constant="8" id="gJq-Av-XxE"/>
+                                    <constraint firstAttribute="trailing" secondItem="JmL-ta-fwJ" secondAttribute="trailing" constant="8" id="ngl-HW-hmb"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vhc-VL-hJC">
-                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hi3-is-12b">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="498"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="669"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="NGu-zT-NMc">
                                             <size key="itemSize" width="50" height="50"/>
@@ -137,6 +142,14 @@
             </objects>
             <point key="canvasLocation" x="68" y="-9.4452773613193415"/>
         </scene>
+        <!--SearchViewController-->
+        <scene sceneID="3mb-3m-7Xn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SearchViewController" id="dkA-12-ybT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mqG-n6-txT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="843" y="-76"/>
+        </scene>
         <!--VideoDetailStoryboard-->
         <scene sceneID="zYp-v5-iNT">
             <objects>
@@ -156,5 +169,6 @@
     </scenes>
     <resources>
         <image name="FirstIcon" width="48" height="48"/>
+        <image name="search" width="48" height="48"/>
     </resources>
 </document>

@@ -10,7 +10,8 @@ import UIKit
 
 class SearchViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
-    
+    var tableViewModel = DefaultUITableViewModel()
+    @IBOutlet weak var myTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,3 +39,19 @@ class SearchViewController: UIViewController {
     */
 
 }
+extension SearchViewController :UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableViewModel.sections[0].rows.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let model = tableViewModel.model(for: indexPath)
+        let cell = tableView.dequeueReusableCell(withModel: model, for: indexPath)
+        return cell
+    }
+}
+extension SearchViewController :UITableViewDelegate{}
+extension SearchViewController {}
+extension SearchViewController {}
+extension SearchViewController {}
+
