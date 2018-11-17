@@ -9,10 +9,13 @@
 import UIKit
 
 class PlayListViewController: UIViewController {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
     var videoUnit:SearchResultUnit?{
         didSet{
-//            newsPrint("\(Date().timeIntervalSince1970)")
-            guard let playlistId = videoUnit?.id.playlistId else{return}
+            guard let videoUnit = self.videoUnit else{return}
+            guard let playlistId = videoUnit.id.playlistId else{return}
             Networking.playlistItem(playlistId: playlistId, finish: { [weak self](result) in
                 self?.playList = result
             }) { (e) in
@@ -20,6 +23,7 @@ class PlayListViewController: UIViewController {
             }
         }
     }
+    //播放列表
     var items:[PlayListItemResultUnit] = []{
         didSet{
             playListTableView.reloadData()
@@ -37,7 +41,14 @@ class PlayListViewController: UIViewController {
         super.viewDidLoad()
 //        newsPrint("\(Date().timeIntervalSince1970)")
         // Do any additional setup after loading the view.
-        
+        updateUIForModel()
+    }
+    func updateUIForModel() -> Void {
+        guard let videoUnit = self.videoUnit else{
+            titleLabel.text = ""
+            return
+        }
+        titleLabel.text = videoUnit.snippet.title
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -47,6 +58,16 @@ class PlayListViewController: UIViewController {
             }
         }
     }
+    
+    
+    
+    
+    @IBAction func backPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
