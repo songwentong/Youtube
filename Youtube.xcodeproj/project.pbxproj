@@ -96,7 +96,10 @@
 /* Begin PBXFileReference section */
 		02681C3E8BE3E25FA94985DF /* Pods_YoutubeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25D9B6E4DBF697672E5E65B0 /* Pods-YoutubeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeUITests/Pods-YoutubeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		26D1313283C775C9C324F1E5 /* Pods-YoutubeTests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeTests.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeTests/Pods-YoutubeTests.adhoc.xcconfig"; sourceTree = "<group>"; };
 		53D272CA6330DD90BC1337EF /* Pods_YoutubeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D98A3B75BDDB1BAAB714BFC /* Pods-YoutubeUITests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeUITests.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeUITests/Pods-YoutubeUITests.adhoc.xcconfig"; sourceTree = "<group>"; };
+		6D969EB59662BA269BB26EB4 /* Pods-Youtube.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-Youtube/Pods-Youtube.adhoc.xcconfig"; sourceTree = "<group>"; };
 		73F126C13255AC9BFE8ED962 /* Pods-Youtube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youtube/Pods-Youtube.release.xcconfig"; sourceTree = "<group>"; };
 		770BF28720CBC061007B7797 /* HomeTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		770BF28820CBC061007B7797 /* HomeTitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTitleCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -609,6 +612,9 @@
 				80F09FF9C61AFEF65DD6E9AF /* Pods-YoutubeTests.release.xcconfig */,
 				F24C49EA7E4252210A557CD6 /* Pods-YoutubeUITests.debug.xcconfig */,
 				25D9B6E4DBF697672E5E65B0 /* Pods-YoutubeUITests.release.xcconfig */,
+				6D969EB59662BA269BB26EB4 /* Pods-Youtube.adhoc.xcconfig */,
+				26D1313283C775C9C324F1E5 /* Pods-YoutubeTests.adhoc.xcconfig */,
+				5D98A3B75BDDB1BAAB714BFC /* Pods-YoutubeUITests.adhoc.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -771,29 +777,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Youtube/Pods-Youtube-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Youtube/Pods-Youtube-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Youtube/Pods-Youtube-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Youtube/Pods-Youtube-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Youtube/Pods-Youtube-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		73A8FB4E970EB699DA8426E1 /* [CP] Check Pods Manifest.lock */ = {
@@ -855,17 +848,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Youtube/Pods-Youtube-resources.sh",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Youtube/Pods-Youtube-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Youtube/Pods-Youtube-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Youtube/Pods-Youtube-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Youtube/Pods-Youtube-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1082,7 +1074,7 @@
 		};
 		774A866C218FE153006DC4FC /* ADHOC */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73F126C13255AC9BFE8ED962 /* Pods-Youtube.release.xcconfig */;
+			baseConfigurationReference = 6D969EB59662BA269BB26EB4 /* Pods-Youtube.adhoc.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -1106,7 +1098,7 @@
 		};
 		774A866D218FE153006DC4FC /* ADHOC */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80F09FF9C61AFEF65DD6E9AF /* Pods-YoutubeTests.release.xcconfig */;
+			baseConfigurationReference = 26D1313283C775C9C324F1E5 /* Pods-YoutubeTests.adhoc.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1128,7 +1120,7 @@
 		};
 		774A866E218FE153006DC4FC /* ADHOC */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25D9B6E4DBF697672E5E65B0 /* Pods-YoutubeUITests.release.xcconfig */;
+			baseConfigurationReference = 5D98A3B75BDDB1BAAB714BFC /* Pods-YoutubeUITests.adhoc.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
